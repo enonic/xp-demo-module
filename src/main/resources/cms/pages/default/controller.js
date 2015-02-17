@@ -8,7 +8,9 @@ function handleGet(req) {
     var site = execute('portal.getSite');
     var content = execute('portal.getContent');
 
+
     var menuItems = menu.getSiteMenu(3);
+
     var moduleConfig = site.data.moduleConfig;;
 
     // Google Analytics

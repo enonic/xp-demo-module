@@ -3919,6 +3919,9 @@ form.failed .failed.message {
 .pricing .software .label:before {
   content: "\e600";
 }
+.pricing .product-group .preface {
+  padding: 10px 0 30px 0;
+}
 .pricing .products {
   list-style: none;
   margin: 0;
@@ -4398,6 +4401,7 @@ ul.carousel {
 }
 .partners .partner-list article header img {
   width: 109px;
+  display: inline-block;
 }
 .partners .partner-list article h3 {
   position: absolute;

@@ -4,17 +4,18 @@
     <meta charset="UTF-8"/>
     <meta name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta data-th-each="og : ${openGraph}" data-th-attr="property=${og.key},content=${og.value}" property="" content=""/>
     <title data-th-text="${pageTitle}">Enonic</title>
     <link rel="shortcut icon" href="../../assets/img/favicon.ico"
           data-th-href="${portal.assetUrl({'_path=img/favicon.ico'})}" type="image/x-icon"/>
     <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/main.css'})}" href="/assets/css/main.css"/>
-    <script src="../../assets/js/jquery-1.11.1.min.js"
+    <!--<script src="../../assets/js/jquery-1.11.1.min.js"
             data-th-src="${portal.assetUrl({'_path=js/jquery-1.11.1.min.js'})}"></script>
     <script src="../../assets/js/jquery.validate.min.js"
             data-th-src="${portal.assetUrl({'_path=js/jquery.validate.min.js'})}"></script>
     <script src="../../assets/js/jquery.form.js" data-th-src="${portal.assetUrl({'_path=js/jquery.form.js'})}"></script>
 
-    <meta data-th-each="og : ${openGraph}" data-th-attr="property=${og.key},content=${og.value}" property="" content=""/>
+
 
 
     <script src="../../assets/js/owl.carousel.min.js"
@@ -24,7 +25,9 @@
             data-th-src="${portal.assetUrl({'_path=js/featherlight.min.js'})}"></script>
     <script src="../../assets/js/main.js" data-th-src="${portal.assetUrl({'_path=js/main.js'})}"></script>
     <script type="text/javascript" src="../../assets/js/fp.js"
-            data-th-src="${portal.assetUrl({'_path=js/fp.js'})}"></script>
+            data-th-src="${portal.assetUrl({'_path=js/fp.js'})}"></script>-->
+    <script type="text/javascript" src="../../assets/js/fp.js"
+            data-th-src="${portal.assetUrl({'_path=js/all.js'})}"></script>
 </head>
 <body data-portal-component-type="page"
       data-th-classappend="(${headerType} == 'layered' ? 'header-layered' : '') + ' ' + (${offsetHeadingRank} ? 'offset-heading-rank' : '')">
