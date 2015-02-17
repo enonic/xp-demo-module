@@ -53,19 +53,40 @@ publishing {
 
 // Declare your sources
 javascript.source {
-    dev {
+    custom {
         js {
             srcDir "src/main/resources/cms/assets/js"
             include "*.js"
-            exclude "*.min.js"
+            //exclude "*.min.js"
         }
+    }
+    vendor {
+        js {
+            srcDir "src/main/resources/cms/assets/js/vendor"
+            include "*.js"
+        }
+    }
+    jquery {
+            js {
+                srcDir "src/main/resources/cms/assets/js/vendor/jquery"
+                include "*.js"
+            }
+        }
+}
+
+minifyJs {
+    source = javascript.source.custom.js.files
+    dest = file("${buildDir}/resources/main/cms/assets/js/custom.min.js")
+    closure {
+        warningLevel = 'QUIET'
     }
 }
 
+
 // Configure the built-in task
 combineJs {
-    source = javascript.source.dev.js.files
-    dest = file( "${buildDir}/resources/main/cms/assets/js/all.js" )
+    source = javascript.source.jquery.js.files + javascript.source.vendor.js.files + minifyJs
+    dest = file("${buildDir}/resources/main/cms/assets/js/all.js")
 }
 
 jar.dependsOn += combineJs

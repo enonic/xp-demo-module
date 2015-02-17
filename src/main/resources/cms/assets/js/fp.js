@@ -99,7 +99,7 @@ $(function() {
 
         // On window resize
         adjustWindow: function() {
-            var winH = this.window.height();
+            var winH = window.innerHeight ? window.innerHeight : this.window.height();
             var winW = this.window.width();
             this.slides.height(winH);
             this.slides.width(winW);
