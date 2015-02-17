@@ -2,11 +2,7 @@
 Enonic XP Demo Module.
 
 ##Install Demo Module
-:toc: left
 
-link:../../index.html[Back]
-
-[.lead]
 This document will guide you through the installation of the demo module.
 
 ## Requirements
