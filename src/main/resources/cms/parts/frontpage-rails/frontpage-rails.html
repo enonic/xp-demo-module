@@ -1,0 +1,56 @@
+<section class="tour enonic-on-rails part">
+    <div class="container">
+        <h2 data-th-text="${title}">Develop faster with Enonic</h2>
+
+        <p data-th-text="${intro}">A set of unique features simplifies and speeds up development. Build and deliver faster and more safely than
+            ever with Enonic on Rails.</p>
+    </div>
+
+    <ul id="train" class="carousel">
+
+        <li class="wagon" data-th-each="slide,iterStat : ${slides}" data-th-class="${iterStat.first or iterStat.last} ? (${iterStat.last} ? 'locomotive reverse' : 'locomotive') : 'wagon'">
+            <div class="wrapper">
+                <h3 data-th-if="${slide.title}" data-th-text="${slide.title}">Natural templating</h3>
+
+            </div>
+            <p data-th-text="${slide.description}">Enables developers and designers to work on templates even outside of the CMS - or use your favourite template engine.</p>
+        </li>
+<!--
+
+        <li class="locomotive">
+            <div class="wrapper">
+                <h3>Natural templating</h3>
+
+            </div>
+            <p>Enables developers and designers to work on templates even outside of the CMS - or use your favourite template engine.</p>
+
+        </li>
+        <li class="wagon">
+            <div class="wrapper">
+                <h3>Lightweight module system</h3>
+
+            </div>
+            <p>Create, share and re-use modules across projects. Supports serverside javascript - any web developer can create modules.</p>
+        </li>
+        <li class="wagon">
+            <div class="wrapper">
+                <h3>Extendable user interface</h3>
+
+            </div>
+            <p>Build advanced forms for content creation and site configuration without programming - extend and customize to any requirement.</p>
+        </li>
+        <li class="locomotive reverse">
+            <div class="wrapper">
+                <h3>Noone will ever read this</h3>
+
+            </div>
+            <p>Ugga bugga ugga sdfka sjdfaøsdf jasødfkja sdøfkasjfø sdfka sdføaasdf asdf øasdfas dfasd fasdfasdøfaskjf aøs</p>
+        </li>-->
+
+    </ul>
+    <footer>
+        <a href="#" data-th-href="${readMoreUrl}" class="button" data-th-text="${linkText}">Learn more about Enonic on Rails</a>
+    </footer>
+
+
+</section>

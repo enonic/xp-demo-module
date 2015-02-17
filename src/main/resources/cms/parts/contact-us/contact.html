@@ -1,0 +1,65 @@
+<div class="contact-us part">
+
+    <div class="container">
+        <h1>Contact us</h1>
+        <div class="intro">
+            <div>
+                <img src="../assets/img/happy-calling-dude.svg" data-th-src="${portal.assetUrl({'_path=img/happy-calling-dude.svg'})}" alt=""/>
+            </div>
+
+            <aside>
+                <h4>Existing customer?</h4>
+                <a href="#" data-th-href="${data.supportUrl}" class="button big">
+                    <span>Get support here</span>
+                </a>
+            </aside>
+        </div>
+    </div>
+
+
+    <section class="contact-form">
+        <div class="container">
+            <p data-th-utext="${data.text}">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non eleifend justo, ut gravida velit. Cras id metus tortor.
+                Nam eget tortor nec lacus euismod.
+            </p>
+
+            <div class="expandable" id="contact-form" data-th-if="${!urlParams.submitted}">
+
+                <form method="post" action="#" data-th-action="${postUrl}" id="contact-us-form" class="validate">
+
+                    <p class="success message">Thank you! We will review your inquiry soon.</p>
+                    <p class="failed message">Something went wrong and the form did not save any data. Please try again, or give us a call to let us know.</p>
+
+                    <div class="form">
+                        <input type="hidden" name="form" value="Contact"/>
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="contact-us-name" required="required" id="contact-us-name"/>
+                        </label>
+                        <label>
+                            <span>Phone</span>
+                            <input type="tel" name="contact-us-phone" id="contact-us-phone"/>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="contact-us-email" required="required" id="contact-us-email"/>
+                        </label>
+                        <label>
+                            <span>Company</span>
+                            <input type="text" name="contact-us-company"/>
+                        </label>
+                        <label>
+                            <span>Message</span>
+                            <textarea name="contact-us-message" required="required"></textarea>
+                        </label>
+                        <input type="submit" value="Send" class="button highlight"/>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</div>

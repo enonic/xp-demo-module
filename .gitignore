@@ -1,0 +1,13 @@
+.DS_Store
+build/
+temp/
+temp/*.*
+target/
+.gradle/
+*.iws
+*.ids
+*.iml
+*.ipr
+.idea
+.sass-cache
+npm-debug.log

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+    <display-name>Company timeline event</display-name>
+    <super-type>base:structured</super-type>
+    <is-abstract>false</is-abstract>
+    <is-final>true</is-final>
+    <is-built-in>false</is-built-in>
+    <allow-child-content>true</allow-child-content>
+    <form>
+        <field-set name="basic">
+            <label>Company timeline event</label>
+            <items>
+                <input type="TextLine" name="year">
+                    <label>Year</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="ComboBox" name="eventType">
+                    <label>Event type</label>
+                    <immutable>false</immutable>
+                    <indexed>false</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                    <config>
+                        <options>
+                            <option>
+                                <label>Company</label>
+                                <value>company</value>
+                            </option>
+                            <option>
+                                <label>Product</label>
+                                <value>product</value>
+                            </option>
+                            <option>
+                                <label>Client</label>
+                                <value>client</value>
+                            </option>
+                        </options>
+                    </config>
+                </input>
+                <input type="ImageSelector" name="image">
+                    <label>Photo</label>
+                    <immutable>false</immutable>
+                    <indexed>false</indexed>
+                    <occurrences minimum="0" maximum="1"/>
+                    <config></config>
+                </input>
+            </items>
+        </field-set>
+    </form>
+</content-type>

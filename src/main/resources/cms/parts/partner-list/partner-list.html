@@ -1,0 +1,402 @@
+<div class="partners part">
+    <h1 data-th-text="${content.displayName}">Partners</h1>
+
+
+
+    <section class="become-partner">
+        <div class="container">
+            <h2>Become a partner</h2>
+
+            <p data-th-utext="${becomePartnerIntro}">
+                Enonic works closely with partners to distribute and implement Enonic CMS. Partnering enables us to
+                extend the distribution of our software and helps us deliver on our commitment to outstanding
+                value.
+            </p>
+
+            <div class="expandable" id="become-partner-info">
+                <div data-th-utext="${becomePartnerBody}">
+                    <p>Becoming an authorized partner of Enonic gives you the opportunity to offer one of the world’s best
+                        web content management solutions in the market. Enonic has a long tradition for delivering optimal
+                        experience to customers in cooperation with partners. Joining our experienced team will bring you
+                        new opportunities in the market and make your business more profitable.
+                    </p>
+
+                    <p>Through collaborating with partners who share our values and have high-quality solutions and
+                        resources, we complement each other's business, technology and service portfolios and competitively
+                        address the growing needs of our customers.
+                    </p>
+
+                    <p>Enonic partners with a broad range of companies that are specialized in software, services, and
+                        technology platforms. These selected partners, working closely with Enonic, bring industry expertise
+                        and specialized knowledge that help us meet the distinctive needs of our customers.
+                    </p>
+                </div>
+
+
+                <a href="contact-us.html" class="button highlight" data-th-href="${contactPageUrl}">Become a partner</a>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <section data-th-each="partnerType : ${partners}" class="partner-group">
+        <div class="container">
+
+
+            <h2 data-th-text="${partnerType.value.title} + ' partners'">Gold partners
+            </h2>
+
+
+            <ul class="partner-list" data-th-classappend="${partnerType.value.title}">
+                <li data-th-each="partner : ${partnerType.value.data}">
+                    <article>
+                        <header>
+                            <a href="#" data-th-href="${partner.data.websiteUrl}">
+                                <h3 data-th-text="${partner.title}">Itera</h3>
+                                <img src="img/tmp/itera-logo.svg" data-th-if="${partner.data.logo}" data-th-src="${portal.imageUrl({'_id=' + partner.data.logo, '_filter=scaleWidth(200)', '_format=png'})}" alt=""/>
+                            </a>
+
+                        </header>
+
+
+                        <div class="description" data-th-if="${partnerType.value.title} ne 'silver'">
+                            <p data-th-text="${partner.data.description}" data-th-if="${partner.data.description}">Our partner from Itera has sold our products over 10 years and has thorough experience,
+                                especially with Enterprise Trial.</p>
+
+                            <ul class="case-studies" data-th-if="${#lists.size(partner.caseStudies)} gt 0">
+                                <li data-th-each="caseStudy : ${partner.caseStudies}">
+                                    <div class="screenshot laptop" data-th-if="${caseStudy.data.screenDesktop}">
+                                        <div class="wrapper">
+                                            <a href="#" data-th-href="${portal.pageUrl({'_id=' + caseStudy.key})}">
+                                                <img src="img/tmp/get-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.data.screenDesktop, '_filter=scaleBlock(160,90)', '_format=jpeg'})}" alt="" data-th-alt="${'Screenshot from the ' + caseStudy.data.title + ' case study'}"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <div data-th-remove="tag" data-th-if="${partner.data.email}">
+                                    <dt>Email:</dt>
+                                    <dd>
+                                        <a href="mailto:post@itera.no" data-th-href="${'mailto:' + partner.data.email}">
+                                            <span data-th-remove="tag" data-th-text="${partner.data.contactName} ? ${partner.data.contactName} : ${partner.data.email}"></span>
+                                        </a>
+                                    </dd>
+                                </div>
+                                <div data-th-remove="tag" data-th-if="${partner.data.phone}">
+                                <dt>Phone:</dt>
+                                <dd data-th-text="${partner.data.phone}">+4712345678</dd>
+
+                                    </div>
+                            </dl>
+                        </div>
+
+
+                    </article>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!--<section>
+        <div class="container">
+            <h2>Platinum partners</h2>
+            <p>For mission-critical and high traffic solutions.</p>
+            <ul class="partner-list platinum">
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/itera-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">
+                            <p>Our partner from Itera has sold our products over 10 years and has thorough experience,
+                                especially with Enterprise Trial.</p>
+
+                            <ul class="case-studies">
+                                <li>
+                                    <div class="screenshot laptop">
+                                        <div class="wrapper">
+                                            <img src="img/tmp/gjensidige-monitor.png" alt=""/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="screenshot laptop">
+                                        <div class="wrapper">
+                                            <img src="img/tmp/get-monitor.png" alt=""/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email:</dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone:</dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <h3>Evry</h3>
+                            <img src="img/tmp/evry-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">Our partner from Itera has sold our products over 10 years and has thorough experience, especially with Enterprise Trial.</div>
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@evry.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+                <li>
+                    <article>
+                        <header>
+                            <h3>Bekk</h3>
+                            <img src="img/tmp/bekk-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">Our partner from Itera has sold our products over 10 years and has thorough experience, especially with Enterprise Trial.</div>
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@bekk.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Gold partners</h2>
+            <p>For multi-site installations and medium traffic.</p>
+            <ul class="partner-list gold">
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/itera-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">Our partner from Itera has sold our products over 10 years and has thorough experience,
+                            especially with Enterprise Trial.</div>
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email:</dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone:</dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/evry-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">Our partner from Itera has sold our products over 10 years and has thorough experience, especially with Enterprise Trial.</div>
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/bekk-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="description">Our partner from Itera has sold our products over 10 years and has thorough experience, especially with Enterprise Trial.</div>
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Silver partners</h2>
+            <p>For point solutions and medium traffic.</p>
+
+            <ul class="partner-list silver">
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/itera-logo.svg" alt=""/>
+                        </header>
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email:</dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone:</dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/evry-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+                <li>
+                    <article>
+                        <header>
+                            <h3>Itera</h3>
+                            <img src="img/tmp/bekk-logo.svg" alt=""/>
+                        </header>
+
+
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <dl>
+                                <dt>Email: </dt>
+                                <dd>
+                                    <a href="mailto:post@itera.no">post@itera.no</a>
+                                </dd>
+                                <dt>Phone: </dt>
+                                <dd>+4712345678</dd>
+                            </dl>
+                        </div>
+
+
+                    </article>
+
+
+                </li>
+
+            </ul>
+        </div>
+
+    </section>-->
+</div>

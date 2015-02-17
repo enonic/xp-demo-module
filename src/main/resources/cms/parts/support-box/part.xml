@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part-component>
+  <display-name>Support box</display-name>
+  <config>
+      <field-set name="background-color">
+          <label>Background color</label>
+          <items>
+              <inline mixin="theme-color-picker"/>
+          </items>
+      </field-set>
+    <field-set name="info">
+      <label>Main information</label>
+      <items>
+        <input type="TextLine" name="title">
+          <label>Title</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="HtmlArea" name="text">
+          <label>Main text</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextLine" name="imagePath">
+          <label>Image path</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+          <input type="ImageSelector" name="imageContent">
+              <label>Image content</label>
+              <immutable>false</immutable>
+              <indexed>false</indexed>
+              <occurrences minimum="0" maximum="1"/>
+              <config></config>
+          </input>
+      </items>
+    </field-set>
+    <field-set name="list">
+      <label>List items</label>
+      <items>
+        <input type="TextLine" name="listItem">
+          <label>List item</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="0" maximum="0"/>
+        </input>
+      </items>
+    </field-set>
+    <field-set name="link">
+      <label>Link</label>
+      <items>
+        <input type="TextLine" name="linkText">
+          <label>Link text</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="ContentSelector" name="linkPage">
+          <label>Link page</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+            <relationship-type>system:reference</relationship-type>
+            <allow-content-type>landing-page</allow-content-type>
+          </config>
+        </input>
+        <input type="TextLine" name="linkUrl">
+          <label>Link URL</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="Checkbox" name="linkHighlight">
+          <label>Link highlight</label>
+          <immutable>false</immutable>
+          <indexed>true</indexed>
+          <occurrences minimum="0" maximum="0"/>
+        </input>
+      </items>
+    </field-set>
+  </config>
+</part-component>

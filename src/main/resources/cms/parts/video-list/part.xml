@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part-component>
+  <display-name>Video list</display-name>
+  <config>
+    <field-set name="heading">
+      <label>Part heading</label>
+      <items>
+        <input type="TextLine" name="heading">
+          <label>Heading</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+    <field-set name="link">
+      <label>Link</label>
+      <items>
+        <input type="TextLine" name="linkText">
+          <label>Link text</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="ContentSelector" name="linkPage">
+          <label>Link page</label>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+            <relationship-type>system:reference</relationship-type>
+            <allow-content-type>landing-page</allow-content-type>
+          </config>
+        </input>
+        <input type="TextLine" name="linkUrl">
+          <label>Link URL</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+    <field-set name="videos">
+      <label>Videos</label>
+      <items>
+        <form-item-set name="videos">
+          <label>Video</label>
+          <occurrences minimum="0" maximum="0"/>
+          <items>
+            <input type="TextLine" name="title">
+              <label>Title</label>
+              <occurrences minimum="0" maximum="1"/>
+            </input>
+            <input type="TextLine" name="videoId">
+              <label>Video ID</label>
+              <occurrences minimum="0" maximum="1"/>
+            </input>
+          </items>
+        </form-item-set>
+      </items>
+    </field-set>
+  </config>
+</part-component>

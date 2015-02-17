@@ -1,0 +1,16 @@
+<section class="part">
+    <div class="container">
+
+        <h2 data-th-if="${config.heading}" data-th-text="${config.heading[0]}">Heading</h2>
+
+
+        <div data-th-if="${config.html}" data-th-utext="${config.html[0]}"></div>
+        <a href="" class="button" data-th-if="${config.buttonText}" data-th-href="${portal.pageUrl({'_id=' + config.buttonContent[0]})}" data-th-text="${config.buttonText[0]}">button text</a>
+
+
+
+
+
+
+    </div>
+</section>

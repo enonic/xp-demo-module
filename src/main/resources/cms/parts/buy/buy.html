@@ -1,0 +1,51 @@
+<div class="buy part">
+
+    <h1 data-th-text="${heading}">Buy</h1>
+    <p data-th-text="${preface}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu libero eros. Aenean ultrices porttitor urna at aliquam. In hac habitasse platea dictumst. Praesent venenatis lacus vel vehicula convallis. Etiam orci nunc, interdum sit amet velit et, rutrum porttitor massa. Duis eget cursus diam, eget tristique justo. </p>
+
+    <form method="post" action="#" data-th-action="${postUrl}" class="validate">
+
+        <p class="success message">Thank you! We will review your inquiry soon.</p>
+        <p class="failed message">Something went wrong and the form did not save any data. Please try again, or give us a call to let us know.</p>
+
+        <div class="form">
+            <label for="buy-product">
+                <span>Product</span>
+                <div class="select">
+                    <select name="product" required="required" id="buy-product">
+                        <div data-th-each="product : ${products}" data-th-remove="tag">
+                            <option data-th-value="${product.code}" data-th-text="${product.name}" data-th-attr="selected=${product.code eq selectedProduct ? 'selected' : null}"></option>
+                        </div>
+                    </select>
+                </div>
+            </label>
+
+            <label for="buy-config" data-th-if="${configuration}">
+                <span>Sites</span>
+                <input type="text" name="config" required="required" id="buy-config" data-th-value="${configuration}"/>
+            </label>
+
+            <label for="buy-name">
+                <span>Name</span>
+                <input type="text" name="name" required="required" id="buy-name"/>
+            </label>
+            <label for="buy-phone">
+                <span>Phone</span>
+                <input type="tel" name="phone" id="buy-phone"/>
+            </label>
+            <label for="buy-email">
+                <span>Email</span>
+                <input type="email" name="email" required="required" id="buy-email"/>
+            </label>
+            <label for="buy-company">
+                <span>Company</span>
+                <input type="text" name="company" id="buy-company"/>
+            </label>
+            <label for="buy-message">
+                <span>Message</span>
+                <textarea name="message" required="required" id="buy-message"></textarea>
+            </label>
+            <input type="submit" value="Send" class="button highlight"/>
+        </div>
+    </form>
+</div>

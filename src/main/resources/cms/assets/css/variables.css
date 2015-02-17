@@ -1,0 +1,49 @@
+/********** Responsive *********/
+/* Modify this to reflect the number of columns in your grid */
+/********** Breakpoints *********/
+/********** Fonts *********/
+@font-face {
+  font-family: 'gt_pressura';
+  src: url('../fonts/GT-Pressura-Regular.eot');
+  src: url('../fonts/GT-Pressura-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/GT-Pressura-Regular.woff') format('woff'), url('../fonts/GT-Pressura-Regular.ttf') format('truetype'), url('../fonts/GT-Pressura-Regular.svg#gt_pressuraregular') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'gt_pressura';
+  src: url('../fonts/GT-Pressura-Light.eot');
+  src: url('../fonts/GT-Pressura-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/GT-Pressura-Light.woff') format('woff'), url('../fonts/GT-Pressura-Light.ttf') format('truetype'), url('../fonts/GT-Pressura-Light.svg#gt_pressuralight') format('svg');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'gt_pressura';
+  src: url('../fonts/GT-Pressura-Bold.eot');
+  src: url('../fonts/GT-Pressura-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/GT-Pressura-Bold.woff') format('woff'), url('../fonts/GT-Pressura-Bold.ttf') format('truetype'), url('../fonts/GT-Pressura-Bold.svg#gt_pressurabold') format('svg');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'akkurat';
+  src: url('../fonts/lineto-akkurat-regular.eot');
+  src: url('../fonts/lineto-akkurat-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lineto-akkurat-regular.woff') format('woff'), url('../fonts/lineto-akkurat-regular.ttf') format('truetype'), url('../fonts/lineto-akkurat-regular.svg#akkurat') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'akkurat';
+  src: url('../fonts/lineto-akkurat-light.eot');
+  src: url('../fonts/lineto-akkurat-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lineto-akkurat-light.woff') format('woff'), url('../fonts/lineto-akkurat-light.ttf') format('truetype'), url('../fonts/lineto-akkurat-light.svg#akkurat-light') format('svg');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?lyey34');
+  src: url('../fonts/icomoon.eot?#iefixlyey34') format('embedded-opentype'), url('../fonts/icomoon.woff?lyey34') format('woff'), url('../fonts/icomoon.ttf?lyey34') format('truetype'), url('../fonts/icomoon.svg?lyey34#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.styled-list {
+  list-style-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2218%22%20height%3D%2212%22%20viewBox%3D%220%200%2018%2012%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m17.1%200c.258%200%20.472.081.643.244.171.163.257.367.257.613%200%20.241-.087.444-.26.609l-10.8%2010.286c-.173.165-.387.248-.64.248-.253%200-.467-.083-.64-.248l-5.4-5.143c-.173-.165-.26-.368-.26-.609%200-.246.086-.45.257-.613.171-.163.385-.244.643-.244.253%200%20.467.083.64.248l4.76%204.541%2010.16-9.684c.173-.165.387-.248.64-.248%22%20fill%3D%22%2339a5c8%22/%3E%3C/g%3E%3C/svg%3E');
+  list-style-position: outside;
+  padding-left: 25px;
+  color: #1c1c1c;
+  line-height: 1.86666667;
+}
+/********** Colors *********/

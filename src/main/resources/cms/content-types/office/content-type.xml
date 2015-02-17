@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+    <display-name>Office</display-name>
+    <super-type>base:structured</super-type>
+    <is-abstract>false</is-abstract>
+    <is-final>true</is-final>
+    <is-built-in>false</is-built-in>
+    <allow-child-content>true</allow-child-content>
+    <form>
+        <field-set name="basic">
+            <label>Office info</label>
+            <items>
+                <input type="TextLine" name="companyName">
+                    <label>Company name</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="ImageSelector" name="image">
+                    <label>Photo</label>
+                    <immutable>false</immutable>
+                    <indexed>false</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                    <config></config>
+                </input>
+            </items>
+        </field-set>
+        <field-set name="visiting-address">
+            <label>Visiting address</label>
+            <items>
+                <input type="TextLine" name="visitingStreetAddress">
+                    <label>Street address</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="TextLine" name="visitingCity">
+                    <label>City</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="TextLine" name="country">
+                    <label>Country</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+            </items>
+        </field-set>
+        <field-set name="postal-address">
+            <label>Postal address</label>
+            <items>
+                <input type="TextLine" name="postalStreetAddress">
+                    <label>Street address</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="TextLine" name="postalPostalCode">
+                    <label>Postal code</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+                <input type="TextLine" name="postalPostalAddress">
+                    <label>Postal Address</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+            </items>
+        </field-set>
+        <field-set name="contact-info">
+            <label>Contact info</label>
+            <items>
+                <input type="TextLine" name="phone">
+                    <label>Phone number</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+                <input type="TextLine" name="email">
+                    <label>Email address</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+            </items>
+        </field-set>
+    </form>
+</content-type>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title data-th-text="${pageTitle}">Enonic</title>
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico"
+          data-th-href="${portal.assetUrl({'_path=img/favicon.ico'})}" type="image/x-icon"/>
+    <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/main.css'})}" href="/assets/css/main.css"/>
+    <script src="../../assets/js/jquery-1.11.1.min.js"
+            data-th-src="${portal.assetUrl({'_path=js/jquery-1.11.1.min.js'})}"></script>
+    <script src="../../assets/js/jquery.validate.min.js"
+            data-th-src="${portal.assetUrl({'_path=js/jquery.validate.min.js'})}"></script>
+    <script src="../../assets/js/jquery.form.js" data-th-src="${portal.assetUrl({'_path=js/jquery.form.js'})}"></script>
+
+    <meta data-th-each="og : ${openGraph}" data-th-attr="property=${og.key},content=${og.value}" property="" content=""/>
+
+
+    <script src="../../assets/js/owl.carousel.min.js"
+            data-th-src="${portal.assetUrl({'_path=js/owl.carousel.min.js'})}"></script>
+
+    <script src="../../assets/js/featherlight.min.js"
+            data-th-src="${portal.assetUrl({'_path=js/featherlight.min.js'})}"></script>
+    <script src="../../assets/js/main.js" data-th-src="${portal.assetUrl({'_path=js/main.js'})}"></script>
+    <script type="text/javascript" src="../../assets/js/fp.js"
+            data-th-src="${portal.assetUrl({'_path=js/fp.js'})}"></script>
+</head>
+<body data-portal-component-type="page"
+      data-th-classappend="(${headerType} == 'layered' ? 'header-layered' : '') + ' ' + (${offsetHeadingRank} ? 'offset-heading-rank' : '')">
+
+
+<a href="#main" id="skip-to-main-content">Skip to main content</a>
+
+<header role="banner" data-th-classappend="${headerColor}">
+    <div class="container">
+        <a href="index.html" class="logo" title="Frontpage" data-th-href="${portal.pageUrl({'_path=' + sitePath})}">
+            <svg viewBox="0 0 97 19" xmlns="http://www.w3.org/2000/svg"><title>Enonic</title>
+                <g fill="#000" fill-rule="evenodd">
+                    <path d="m0 9.54c0-5.274 3.801-9.54 8.537-9.54 4.518 0 8.105 3.878 8.463 8.842v.154c0 .503-.394.852-.86.852h-14.419c.178 4.15 3.193 7.291 6.815 7.291 2.331 0 4.482-1.319 5.665-3.452.252-.465.79-.542 1.149-.31.396.31.539.854.287 1.319-1.507 2.597-4.126 4.304-7.101 4.304-4.736 0-8.537-4.266-8.537-9.46m1.828-1.512h13.308c-.574-3.569-3.373-6.167-6.6-6.167-3.3 0-6.06 2.561-6.708 6.167"/>
+                    <path d="m65.5 0c-4.146 0-7.501 3.497-7.501 7.733v10.336c0 .543.414.931.903.931.491 0 .905-.388.905-.931v-10.336c0-3.225 2.525-5.868 5.692-5.868 3.166 0 5.69 2.643 5.69 5.868v10.336c0 .543.414.931.905.931.489 0 .903-.388.903-.931v-10.336c0-4.236-3.353-7.733-7.499-7.733"/>
+                    <path d="m27.534 0c-4.146 0-7.501 3.497-7.501 7.733v10.336c0 .543.414.931.903.931.491 0 .905-.388.905-.931v-10.336c0-3.225 2.525-5.868 5.692-5.868 3.166 0 5.69 2.643 5.69 5.868v10.336c0 .543.414.931.905.931.489 0 .903-.388.903-.931v-10.336c0-4.236-3.353-7.733-7.499-7.733"/>
+                    <path d="m76 .931c0-.544.42-.931.918-.931.534 0 .954.388.954.931v17.14c0 .503-.42.929-.954.929-.498 0-.918-.426-.918-.929v-17.14"/>
+                    <path d="m81 9.462c0-5.274 4.3-9.462 9.675-9.462 2.226 0 4.34.775 5.99 2.094.384.272.46.852.117 1.278-.309.349-.846.467-1.268.156-1.344-1.086-3.034-1.707-4.838-1.707-4.376 0-7.832 3.452-7.832 7.64 0 4.263 3.456 7.677 7.832 7.677 1.804 0 3.494-.621 4.838-1.668.422-.31.958-.193 1.268.156.344.426.267 1.01-.193 1.358-1.573 1.24-3.687 2.02-5.913 2.02-5.375 0-9.675-4.188-9.675-9.538"/>
+                    <path d="m39.796 8c.62-3.514 3.43-6.186 6.704-6.186 3.273 0 6.081 2.672 6.701 6.186h1.799c-.643-4.468-4.172-8-8.5-8-4.295 0-7.853 3.532-8.5 8h1.796"/>
+                    <path d="m53.2 11c-.594 3.508-3.412 6.162-6.704 6.162-3.294 0-6.114-2.654-6.706-6.162h-1.795c.617 4.458 4.186 7.996 8.501 7.996 4.346 0 7.888-3.538 8.499-7.996h-1.795"/>
+                </g>
+            </svg>
+        </a>
+
+        <button class="toggle-menu" id="toggle-menu" aria-haspopup="true" aria-owns="main-nav" aria-controls="main-nav"
+                aria-expanded="false">
+            <span>Toggle menu</span>
+            <span class="lines"></span>
+        </button>
+
+        <nav id="main-nav" aria-expanded="false" aria-labelledby="toggle-menu">
+            <ul>
+                <li data-th-each="menuItem : ${menuItems}">
+                    <a href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
+                       data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"
+                       data-th-class="${menuItem.path == path ? 'active' : ''}">Page title</a>
+                </li>
+                <li>
+                    <a href="https://enonic.com/community" class="community"><span>Enonic Community</span></a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="page">
+
+    <main role="main" id="main" data-portal-component-type="region">
+        <div data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
+            <div data-wem-component="${component.path}" data-th-remove="tag"></div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+
+        <h2>Footer navigation</h2>
+
+        <nav id="footer-nav">
+            <ul>
+                <li data-th-each="menuItem : ${menuItems}">
+                    <a href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
+                       data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"
+                       data-th-class="${menuItem.path == path ? 'active' : ''}">Page title</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="social">
+            <div class="container">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/Enonic_CMS" class="twitter">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/enonic.no" class="facebook">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/enonic" class="linkedin">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+EnonicCommunity/" class="gplus">Google+</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/EnonicCommunity" class="youtube">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="http://labs.enonic.com" class="labs">Enonic Labs</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="offices">
+            <h3>Locations</h3>
+            <div class="map">
+                <a href="contact-us.html" data-th-href="${contactPageUrl}">
+                    <img src="../../assets/img/footer-map.png"
+                         data-th-src="${portal.assetUrl({'_path=img/footer-map.png'})}"
+                         alt="World map with Enonic offices"/>
+                </a>
+            </div>
+            <div class="international">
+                <ul>
+                    <li data-th-each="office : ${offices}">
+                        <h4>
+                            <a href="contact-us.html" data-th-href="${contactPageUrl}"
+                               data-th-text="${office.visitingCity}">Oslo</a>
+                        </h4>
+                        <a href="tel:+4690909090" class="phone" data-th-if="${office.phone}"
+                           data-th-text="${office.phone}" data-th-href="'tel:' + ${office.phoneNoSpace}">+46 909 09 090</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="copyright">
+            <p>Copyright &#169; Enonic AS. All Rights Reserved. We use cookies.</p>
+        </div>
+    </footer>
+</div>
+
+
+<script data-th-if="${googleUATrackingId}" data-th-inline="javascript">
+    var googleUATrackingId = /*[[${googleUATrackingId}]]*/ null;
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', googleUATrackingId, 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

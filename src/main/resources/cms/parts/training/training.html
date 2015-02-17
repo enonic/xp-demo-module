@@ -1,0 +1,32 @@
+<section class="training part">
+    <div class="container">
+        <h2>Training and certification</h2>
+        <p data-th-utext="${text}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at imperdiet magna, id interdum magna. Vestibulum luctus venenatis venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi rhoncus ipsum at dolor posuere hendrerit. Ut condimentum non dui sed mollis. Aliquam sit amet pulvinar enim, in aliquet tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus in turpis egestas, luctus urna sodales, fringilla eros. Quisque sed est ac magna scelerisque imperdiet. Sed sit amet ante ex. Sed tempor lacus odio, in vulputate tellus suscipit sollicitudin. In sit amet viverra turpis, vitae venenatis ligula.</p>
+        <h3>Upcoming training sessions</h3>
+        <ol class="event-list">
+            <li data-th-each="event : ${events}">
+                <article>
+                    <div class="date">
+                        <time data-th-attr="datetime='${event.startDate}'" datetime="2015-03-01T09:00CET">
+                            <div>
+                                <span class="month" data-th-text="${event.month}">Mar</span>
+                                <!--<span class="month" data-th-text="${#dates.format(event.month, 'dd/MMM/yyyy HH:mm')}">Mar</span>-->
+                                <span class="day" data-th-text="${event.day}">1</span>
+                                <!--<span class="month">Mar</span>
+                                <span class="day">1</span>-->
+                            </div>
+                        </time>
+                    </div>
+                    <div class="info">
+                        <h4><a href="#" data-th-href="${event.linkUrl}" data-th-text="${event.name}" rel="external">Content manager</a></h4>
+                        <div class="location" data-th-text="${event.location}">Oslo, Norway</div>
+
+                        <p data-th-text="${event.description}">Lorem ipsum her kommere noe!</p>
+                    </div>
+                </article>
+            </li>
+        </ol>
+
+        <a href="#" data-th-href="${url}" class="button highlight">Visit the Enonic Academy</a>
+    </div>
+</section>

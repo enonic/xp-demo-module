@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part-component>
+    <display-name>Buy</display-name>
+    <config>
+        <input type="ContentSelector" name="saveFolder">
+            <label>Save folder</label>
+            <immutable>false</immutable>
+            <indexed>true</indexed>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <relationship-type>system:reference</relationship-type>
+                <allow-content-type>base:folder</allow-content-type>
+            </config>
+        </input>
+        <input type="TextArea" name="preface">
+            <label>Preface</label>
+            <immutable>false</immutable>
+            <indexed>true</indexed>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+    </config>
+</part-component>

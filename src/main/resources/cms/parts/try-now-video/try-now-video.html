@@ -1,0 +1,15 @@
+<section class="try-now video part">
+    <div class="container">
+        <h1 data-th-text="${heading}">Try now</h1>
+
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus ligula, aliquet ut euismod ut, fermentum sed lectus. Aenean
+            efficitur, purus quis sollicitudin scelerisque, dolor ex mattis massa, ac imperdiet ex turpis non odio.</p>-->
+        <p data-th-text="${text}"></p>
+
+
+
+        <!--<div class="youtube video masked lightbox" data-youtube-id="28f6g4SCH-A" data-title="Enonic eXperience Platform demo"></div>-->
+        <div data-th-if="${videoId}" class="youtube video masked highlight lightbox" data-th-attr="data-youtube-id=${videoId}" data-youtube-id="${videoId}" data-title="Enonic eXperience Platform demo"></div>
+
+    </div>
+</section>

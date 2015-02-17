@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part-component>
+    <display-name>Call to action bar</display-name>
+    <config>
+        <form-item-set name="link">
+            <label>Link</label>
+            <items>
+                <inline mixin="link-url"/>
+            </items>
+            <occurrences minimum="0" maximum="3"/>
+        </form-item-set>
+    </config>
+</part-component>

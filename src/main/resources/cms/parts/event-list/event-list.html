@@ -1,0 +1,17 @@
+<div class="events">
+    <h1 data-th-text="${title}">Events</h1>
+    <section class="event" data-th-each="event : ${events}" data-th-if="${#lists.size(events)} gt 0" >
+        <img data-th-if="${event.image}" data-th-src="${portal.imageUrl({'_id=' + event.image, '_filter=scaleBlock(1200, 400)', '_format=jpeg'})}" src="#" alt="" />
+        <h2 data-th-text="${event.title}">Launch party in Oslo</h2>
+
+        <h3 class="date-location">
+            <span data-th-text="${event.formattedStartDate}" data-th-if="${event.formattedStartDate}">April 1, 2015</span> - <span data-th-text="${event.location}" data-th-if="${event.location}">Oslo</span>
+        </h3>
+
+        <!--#dates.format(date, 'dd/MMM/yyyy HH:mm')-->
+
+        <p data-th-utext="${event.description}" data-th-if="${event.description}">Lorem ipsum and all that.</p>
+
+        <a class="button highlight" href="#" data-th-if="${event.linkUrl}" data-th-href="${event.linkUrl}" data-th-text="${event.linkText}">Contact us for more info</a>
+    </section>
+</div>

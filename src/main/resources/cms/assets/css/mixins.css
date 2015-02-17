@@ -1,0 +1,40 @@
+.audible-text-absolute {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+  overflow: hidden;
+}
+.audible-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Hide only visually, but have it available for screenreaders */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: auto;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.remove-list-styling {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

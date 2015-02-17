@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+    <display-name>Test content-type</display-name>
+    <content-display-name-script>$('fisk')</content-display-name-script>
+    <super-type>base:structured</super-type>
+    <is-abstract>false</is-abstract>
+    <is-final>true</is-final>
+    <is-built-in>false</is-built-in>
+    <allow-child-content>true</allow-child-content>
+    <form>
+        <field-set name="basic">
+            <label>Info</label>
+            <items>
+                <input type="TextLine" name="fisk">
+                    <label>Fisk</label>
+                    <immutable>false</immutable>
+                    <indexed>true</indexed>
+                    <occurrences minimum="1" maximum="1"/>
+                </input>
+            </items>
+        </field-set>
+    </form>
+</content-type>

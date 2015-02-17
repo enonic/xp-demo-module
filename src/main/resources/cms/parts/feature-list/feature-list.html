@@ -1,0 +1,111 @@
+<div class="features part">
+    <h1 data-th-text="${content.displayName}">Partners</h1>
+
+
+    <section data-th-each="feature : ${features}">
+        <div class="container">
+            <h2 data-th-text="${feature.displayName}">Private app store</h2>
+
+            <p data-th-text="${feature.data.description}">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque euismod nunc quis magna malesuada lobortis. Class aptent taciti sociosqu ad litora</p>
+
+            <div class="youtube video" data-youtube-id="z4As-BCvzD8"
+                 data-th-attr="data-youtube-id=${feature.data['youtube-id']}"
+                 data-th-if="${feature.data['youtube-id'] and !#strings.isEmpty(feature.data['youtube-id'])}"></div>
+
+
+            <div class="container" data-th-if="${feature.data.images} and ${#lists.size(feature.data.images)} gt 0" data-th-classappend="${#lists.size(feature.data.images)} gt 1 ? 'owl-carousel carousel'">
+
+                <div data-th-each="image : ${feature.data.images}" data-th-remove="tag">
+                    <figure data-th-if="${image.image}">
+                        <img src="img/tmp/5ern1.png" alt="" data-th-src="${portal.imageUrl({'_id=' + image.image, '_filter=scaleBlock(800,450)', '_format=jpeg'})}"/>
+                        <figcaption data-th-if="${image['image-caption']}" data-th-text="${image['image-caption']}">This is just a test</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+
+            <dl data-th-if="${feature.data.bullets} and ${#lists.size(feature.data.bullets)} gt 0">
+                <!--<div data-th-text="${bullet.label}"></div>
+                <div data-th-text="${bullet.label}"></div>
+                <div data-th-if="${bullet.label}">test</div>-->
+                <!--&lt;!&ndash;<div data-th-if="${#arrays.length(bullet['label'])} gt 0">test</div>&ndash;&gt;
+                &lt;!&ndash;<div data-th-if="${#maps.size(bullet['label'])} gt 0">test</div>&ndash;&gt;
+
+
+
+                &lt;!&ndash;<div data-th-remove="tag" data-th-if="${#lists.size(bullet['label'])} gt 0">
+                    <dt data-th-text="${bullet.label[0]}" >OSGI</dt>
+                </div>&ndash;&gt;
+                &lt;!&ndash;<div datta-th-remove="tag" data-th-if="${bullet['value'] and !#strings.isEmpty(bullet['value'][0])}">
+                    <dd data-th-text="${bullet.value[0]}">Utilising the open gateway initiative java modular</dd>
+                </div>&ndash;&gt;-->
+                <div data-th-each="bullet : ${feature.data.bullets}" data-th-remove="tag">
+                    <dt data-th-text="${bullet.label}"></dt>
+                    <dd data-th-text="${bullet.value}"></dd>
+
+                </div>
+
+            </dl>
+
+        </div>
+    </section>
+    <!--
+    <section>
+        <div class="container">
+            <h2>Private app store</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nunc quis magna malesuada lobortis. Class aptent taciti sociosqu ad litora</p>
+
+
+            <div class="youtube video" data-youtube-id="z4As-BCvzD8"></div>
+
+
+            <dl>
+                <dt>OSGI</dt>
+                <dd>Utilising the open gateway initiative java modular</dd>
+                <dt>Opening hours</dt>
+                <dd>Mon-Fri 9-17</dd>
+                <dt>Uptime</dt>
+                <dd>99,2%</dd>
+                <dt>Storage</dt>
+                <dd>50G</dd>
+            </dl>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Private app store</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nunc quis magna malesuada lobortis. Class aptent taciti sociosqu ad litora</p>
+
+            <div class="owl-carousel container carousel">
+                <figure>
+                    <img src="img/tmp/5ern1.png" alt=""/>
+                    <figcaption>This is just a test</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/tmp/5ern2.png" alt=""/>
+                    <figcaption>This is also a test</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/tmp/5ern3.png" alt=""/>
+                    <figcaption>This is just a test</figcaption>
+                </figure>
+            </div>
+
+            <dl>
+                <dt>OSGI</dt>
+                <dd>Utilising the open gateway initiative java modular</dd>
+                <dt>Opening hours</dt>
+                <dd>Mon-Fri 9-17</dd>
+                <dt>Uptime</dt>
+                <dd>99,2%</dd>
+                <dt>Storage</dt>
+                <dd>50G</dd>
+            </dl>
+        </div>
+    </section>-->
+
+</div>

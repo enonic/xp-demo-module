@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixin>
+    <display-name>Theme color picker</display-name>
+    <items>
+        <input name="themeColor" type="SingleSelector">
+            <label>Theme color</label>
+            <indexed>true</indexed>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <options>
+                    <option>
+                        <label>White</label>
+                        <value>white</value>
+                    </option>
+                    <option>
+                        <label>Grey</label>
+                        <value>grey</value>
+                    </option>
+                    <option>
+                        <label>Blue</label>
+                        <value>blue</value>
+                    </option>
+                </options>
+                <selector-type>DROPDOWN</selector-type>
+            </config>
+        </input>
+    </items>
+</mixin>
+

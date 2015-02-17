@@ -1,0 +1,10 @@
+<div data-th-if="${#lists.size(links)} gt 0" data-th-remove="tag">
+    <aside class="call-to-action">
+        <ul>
+            <!-- loop through each of the links from the part config -->
+            <li data-th-each="link : ${links}">
+                <a data-th-href="${link.link}" data-th-text="${link.linkText}"></a>
+            </li>
+        </ul>
+    </aside>
+</div>

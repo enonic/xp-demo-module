@@ -1,0 +1,35 @@
+<section class="video-list part">
+    <div class="container">
+        <h2>Getting started</h2>
+
+        <ul class="videos">
+            <div data-th-if="${#lists.size(videos)} gt 0" data-th-remove="tag">
+                <li data-th-each="video : ${videos}">
+                    <h3 data-th-text="${video.title}"></h3>
+                    <div class="youtube video" data-th-attr="data-youtube-id=${video.videoId}" data-youtube-id="z4As-BCvzD8"></div>
+                </li>
+            </div>
+            <div data-th-if="${#lists.size(videos)} eq 0" data-th-remove="tag">
+                <li>
+                    <h3>Getting started</h3>
+                    <div class="youtube video lightbox" data-youtube-id="28f6g4SCH-A"></div>
+                </li>
+                <li>
+                    <h3>How to edit photos</h3>
+                    <div class="youtube video lightbox" data-youtube-id="z4As-BCvzD8"></div>
+                </li>
+                <li>
+                    <h3>Getting started</h3>
+                    <div class="youtube video lightbox" data-youtube-id="kDmP2ZxELos"></div>
+                </li>
+                <li>
+                    <h3>Getting started</h3>
+                    <div class="youtube video lightbox" data-youtube-id="ts2zfHa3D5E"></div>
+                </li>
+            </div>
+        </ul>
+
+        <a href="#" data-th-href="${linkUrl}" data-th-text="${linkText}" class="button">Visit our community site for more information</a>
+    </div>
+
+</section>
