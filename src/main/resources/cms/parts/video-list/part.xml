@@ -11,25 +11,16 @@
         </input>
       </items>
     </field-set>
+      <field-set name="background-color">
+          <label>Background color</label>
+          <items>
+              <inline mixin="theme-color-picker"/>
+          </items>
+      </field-set>
     <field-set name="link">
       <label>Link</label>
       <items>
-        <input type="TextLine" name="linkText">
-          <label>Link text</label>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
-        <input type="ContentSelector" name="linkPage">
-          <label>Link page</label>
-          <occurrences minimum="0" maximum="1"/>
-          <config>
-            <relationship-type>system:reference</relationship-type>
-            <allow-content-type>landing-page</allow-content-type>
-          </config>
-        </input>
-        <input type="TextLine" name="linkUrl">
-          <label>Link URL</label>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
+        <inline mixin="link-url"/>
       </items>
     </field-set>
     <field-set name="videos">

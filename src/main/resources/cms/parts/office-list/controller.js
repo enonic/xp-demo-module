@@ -9,10 +9,9 @@ function handleGet(req) {
     if (content.type == module.name + ':office') {
         offices.push(content.data)
     } else {
-        result = execute('content.query', {
-            start: 0,
-            count: 3,
-            sort: '_modifiedTime ASC',
+        result = execute('content.getChildren', {
+            key: content['_path'],
+            count: 10,
             contentTypes: [
                 module.name + ':office'
             ]

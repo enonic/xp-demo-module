@@ -1,0 +1,6 @@
+<dl>
+    <div data-th-each="item : ${data}" data-th-remove="tag">
+        <dt data-th-text="${item.key}"></dt>
+        <dd data-th-text="${item.value}"></dd>
+    </div>
+</dl>

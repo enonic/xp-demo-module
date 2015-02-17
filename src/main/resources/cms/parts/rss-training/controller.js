@@ -7,15 +7,15 @@ function handleGet(req) {
     var config = component.config;
     var text = config['text'];
     var linkUrl = config['linkUrl'];
-    var defaultLinkUrl = 'https://enonic.com/academy';
     var linkPageKey = config['linkPage'];
-    var linkText = config['linkText'] ? config['linkText'] : 'Visit the Enonic Academy';
+    var linkText = config['linkText'] || 'Visit the Enonic Academy';
+    var anchorContentKey = config['anchorContent'];
 
 
     var params = {
         config: config,
-        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, defaultLinkUrl),
-        linkText: linkText,
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey),
+        linkText: linkText
 
     };
 

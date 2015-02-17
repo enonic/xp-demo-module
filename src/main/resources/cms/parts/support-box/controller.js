@@ -3,7 +3,6 @@ var utilities = require('/cms/lib/utilities.js');
 
 function handleGet(req) {
 
-    var defaultLinkUrl = 'https://enonic.com/support';
     var component = execute('portal.getComponent');
 
     var title = component.config['title'] ? component.config['title'] : 'Product support';
@@ -23,7 +22,8 @@ function handleGet(req) {
 
     var linkUrl = component.config['linkUrl'];
     var linkPageKey = component.config['linkPage'];
-    var linkText = component.config['linkText'] ? component.config['linkText'] : 'Get a Quote' ;
+    var linkText = component.config['linkText'] || null;
+    var anchorContentKey = component.config['anchorContent'];
     var highlight = component.config['linkHighlight'];
     var linkHighlight = (highlight == true || highlight == 'true') ? true : false;
     var bgColor = component.config['themeColor'] || null;
@@ -34,7 +34,7 @@ function handleGet(req) {
         text: text,
         imagePath: imagePath,
         listItem: listItem,
-        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, defaultLinkUrl),
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey),
         linkText: linkText,
         linkHighlight: linkHighlight,
         bgColor: bgColor

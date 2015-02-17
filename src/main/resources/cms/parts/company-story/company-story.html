@@ -1,8 +1,8 @@
 <section class="company-story part">
 
-    <h1>Company</h1>
-    <div class="container">
-        <p>Enonic is a dedicated and innovative software company. Our vision is to deliver the ultimate platform for digital experiences.
+    <h1 data-th-text="${title}">Company</h1>
+    <div class="container" data-th-if="${preface}">
+        <p data-th-text="${preface}">Enonic is a dedicated and innovative software company. Our vision is to deliver the ultimate platform for digital experiences.
 
             Our values: Open, Agile, Secure</p>
 

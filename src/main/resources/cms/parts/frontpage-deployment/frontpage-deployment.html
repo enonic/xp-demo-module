@@ -1,12 +1,11 @@
 <section class="tour it-loves-enonic deployment part">
     <div class="container">
-        <h2>Fits with your business</h2>
+        <h2 data-th-text="${data.title}">Fits with your business</h2>
 
-        <p>Why should you adapt your business to technology? Enonic is scalable, open and supported, and runs on
+        <p data-th-text="${data.preface}">Why should you adapt your business to technology? Enonic is scalable, open and supported, and runs on
             just about any infrastructure.</p>
         <img src="img/it-loves-enonic-deployment.svg" data-th-src="${portal.assetUrl({'_path=img/it-loves-enonic-deployment.svg'})}"  alt=""/>
-        <a href="#" data-th-href="${linkUrl}" class="button" data-th-text="${linkText}">Read more about EXP features</a>
+        <a data-th-if="${linkText}" href="#" data-th-href="${linkUrl}" class="button" data-th-text="${linkText}">Read more about EXP features</a>
 
     </div>
-
 </section>

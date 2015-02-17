@@ -48,10 +48,10 @@ function handlePost(req) {
     // Check required fields and create content
     if (p['contact-us-name'] && ( p['contact-us-phone'] || p['contact-us-email']) && p['contact-us-message']) {
         var result = execute('content.create', {
-            name: p['form'] + ' ' + p['contact-us-name'],
+            name: 'Contact ' + p['contact-us-name'] + '-' + Math.floor((Math.random() * 1000000000) + 1),
             parentPath: saveLocation,
             displayName: p['contact-us-name'],
-            draft: false,
+            branch: 'draft',
             contentType: 'base:unstructured',
             data: {
                 form: p['form'],

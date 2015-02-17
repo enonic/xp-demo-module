@@ -82,10 +82,10 @@ function handlePost(req) {
     var fp = req.formParams;
 
     var result = execute('content.create', {
-        name: 'mycontent' + Math.floor((Math.random() * 1000000000) + 1),
+        name: 'Buy ' + fp['name'] + '-' + Math.floor((Math.random() * 1000000000) + 1),
         parentPath: saveLocation,
-        displayName: 'Buy',
-        draft: true,
+        displayName: fp['name'],
+        branch: 'draft',
         contentType: 'base:unstructured',
         data: {
             product: fp['product'],

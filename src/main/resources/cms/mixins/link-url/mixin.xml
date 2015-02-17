@@ -17,6 +17,15 @@
         <relationship-type>system:reference</relationship-type>
       </config>
     </input>
+      <input type="ContentSelector" name="anchorContent">
+          <label>Anchor content</label>
+          <immutable>false</immutable>
+          <indexed>false</indexed>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+              <relationship-type>system:reference</relationship-type>
+          </config>
+      </input>
     <input type="TextLine" name="linkUrl">
       <label>Link URL</label>
       <immutable>false</immutable>

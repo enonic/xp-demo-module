@@ -1,8 +1,8 @@
 <section class="tour proven-technologies part">
     <div class="container">
-        <h2>Proven technologies, no compromises</h2>
+        <h2 data-th-text="${data.title}">Proven technologies, no compromises</h2>
 
-        <p class="b2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at libero imperdiet, vestibulum dolor
+        <p data-th-text="${data.preface}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at libero imperdiet, vestibulum dolor
             vitae, luctus eros. Etiam dictum venenatis orci et sodales. Duis viverra, arcu eget aliquam placerat, felis
             diam ullamcorper lectus, vel suscipit lectus quam a tellus. Aliquam erat volutpat.</p>
 
@@ -16,9 +16,7 @@
             </ul>
         </div>
 
-        <p>
-            <a href="case-studies.html" data-th-href="${linkUrl}" class="button" data-th-text="${linkText}">Read our case studies</a>
-        </p>
+        <a data-th-if="${linkText}" href="case-studies.html" data-th-href="${linkUrl}" class="button" data-th-text="${linkText}">Read our case studies</a>
     </div>
 
 </section>

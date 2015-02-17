@@ -1,11 +1,17 @@
 var stk = require('/cms/lib/stk/stk.js');
+var utilities = require('/cms/lib/utilities.js');
 
 function handleGet(req) {
 
     var currentContent = execute('portal.getContent');
     var component = execute('portal.getComponent');
     var text = component.config['text'];
-    var url = component.config['url'] ? component.config['url'] : 'https://enonic.com/academy'
+
+    var config = component.config;
+    var linkUrl = config['linkUrl'];
+    var linkPageKey = config['linkPage'];
+    var linkText = config['linkText'] || null;
+    var anchorContentKey = config['anchorContent'];
 
     var result = execute('content.query', {
         //query: "_parentpath = '/content" + currentContent._path + "'", // temporary fix. Remove /content when they fix it.
@@ -57,8 +63,10 @@ function handleGet(req) {
     var params = {
         content: currentContent,
         text: text,
-        url: url,
-        events: events
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey),
+        linkText: linkText,
+        events: events,
+        bgColor: component.config['themeColor'] || null
     };
 
     var view = resolve('training.html');

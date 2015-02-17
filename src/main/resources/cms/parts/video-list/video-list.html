@@ -1,4 +1,4 @@
-<section class="video-list part">
+<section class="video-list part" data-th-classappend="${bgColor}">
     <div class="container">
         <h2>Getting started</h2>
 
@@ -29,7 +29,7 @@
             </div>
         </ul>
 
-        <a href="#" data-th-href="${linkUrl}" data-th-text="${linkText}" class="button">Visit our community site for more information</a>
+        <a data-th-if="${linkText}" href="#" data-th-href="${linkUrl}" data-th-text="${linkText}" class="button">Visit our community site for more information</a>
     </div>
 
 </section>

@@ -12,6 +12,6 @@
             <li data-th-each="item: ${listItem}" data-th-text="${item}"></li>
         </ul>
 
-        <a href="pricing.html" class="button highlight" data-th-class="${linkHighlight == true ? 'highlight button': 'button'}" data-th-href="${linkUrl}" data-th-text="${linkText}">Check out products and pricing</a>
+        <a data-th-if="${linkText}" href="pricing.html" class="button highlight" data-th-class="${linkHighlight == true ? 'highlight button': 'button'}" data-th-href="${linkUrl}" data-th-text="${linkText}">Check out products and pricing</a>
     </div>
 </section>

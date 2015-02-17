@@ -5,7 +5,14 @@
         <h2 data-th-text="${event.title}">Launch party in Oslo</h2>
 
         <h3 class="date-location">
-            <span data-th-text="${event.formattedStartDate}" data-th-if="${event.formattedStartDate}">April 1, 2015</span> - <span data-th-text="${event.location}" data-th-if="${event.location}">Oslo</span>
+            <!--<span data-th-text="${event.formattedStartDate}" data-th-if="${event.formattedStartDate}">April 1, 2015</span>
+            <span data-th-text="${event.startTime}" data-th-if="${event.startTime}"></span>
+            -
+            <span data-th-text="${event.formattedEndDate}" data-th-if="${event.formattedEndDate}"></span>
+            <span data-th-text="${event.endTime}" data-th-if="${event.endTime}"></span>-->
+            <span data-th-text="${event.date}" data-th-if="${event.date}">April 1, 2015</span>
+            -
+            <span data-th-text="${event.location}" data-th-if="${event.location}">Oslo</span>
         </h3>
 
         <!--#dates.format(date, 'dd/MMM/yyyy HH:mm')-->

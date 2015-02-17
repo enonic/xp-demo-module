@@ -397,7 +397,10 @@ $(function() {
             $('.product-group').click(function(e) {
                 var target = e.target;
                 if (target.nodeName === 'A') {
-                    target.href += '&co=' + that.siteNumberSelector.val();
+                    var productType = $(target).closest('article').data('product-type');
+                    if (productType === 'cloud') {
+                        target.href += '&co=' + that.siteNumberSelector.val();
+                    }
                     target.href += '&ac=' + $(target).data('action');
                 }
             });
@@ -441,8 +444,6 @@ $(function() {
 
         // Set chosen currency
         setCurrency: function() {
-            //this.currencySelectorBtns.removeClass('selected');
-            //this.currencySelectorBtns.filter('[data-currency="' + this.currency + '"]').addClass('selected');
             this.prices.filter('.selected').removeClass('selected');
             this.prices.filter('[data-currency="' + this.currency + '"]').addClass('selected');
             this.setStartupFee();
@@ -458,7 +459,11 @@ $(function() {
                 var startupFeeNumber = currentPrice.data('base-price');
                 var startupFee = currentPrice.children().clone();
                 startupFee.find('.number').text(startupFeeNumber);
-                startupFeeEl.text(startupFee.text());
+                var startupFeeText = '';
+                startupFee.each(function() {
+                    startupFeeText += $(this).text() + ' ';
+                });
+                startupFeeEl.text(startupFeeText);
             });
         }
     };

@@ -11,7 +11,8 @@ function buildParams(req, urlParam) {
         textBelowForm: component.config['textBelowForm'] || 'Push Send and we will send you an email with details you need to download.',
         thankYou: component.config['thankYou'] || 'Thank you! Check your email for details you need to experience the cloud demo.',
         communityVersion: component.config['communityVersion'] || 'Or <a href="#t-Download-now">download the free community version.</a>',
-        description: component.config['description'] || 'No registration, no expiration - requires java.<br/> Download takes 2-5 minutes.'
+        description: component.config['description'] || 'No registration, no expiration - requires java.<br/> Download takes 2-5 minutes.',
+        downloadUrl: component.config['downloadUrl'] || '#'
     };
 
     return {
@@ -27,13 +28,7 @@ function handleGet(req) {
     var content = execute('portal.getContent');
     var params = buildParams(req);
 
-    return {
-        body: execute('thymeleaf.render', {
-            view: view,
-            model: params
-        }),
-        contentType: 'text/html'
-    };
+    return stk.view.render(view, params);
 }
 
 function handlePost(req) {
@@ -55,11 +50,11 @@ function handlePost(req) {
     // Check required fields and create content
     if (p['cloud-register-name'] && p['cloud-register-phone'] && p['cloud-register-email']) {
         var result = execute('content.create', {
-            name: p['form'] + ' ' + p['cloud-register-name'],
+            name: 'Try ' + p['cloud-register-name'] + '-' + Math.floor((Math.random() * 1000000000) + 1),
             //parentPath: content._path,
             parentPath: saveLocation,
             displayName: p['cloud-register-name'],
-            draft: false,
+            branch: 'draft',
             contentType: 'base:unstructured',
             data: {
                 form: p['form'],

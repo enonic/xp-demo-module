@@ -3,6 +3,8 @@ var stk = require('/cms/lib/stk/stk.js');
 
 function handleGet(req) {
 
+
+
     var site = execute('portal.getSite');
     var content = execute('portal.getContent');
 

@@ -52,7 +52,8 @@
     <field-set name="link">
       <label>Link</label>
       <items>
-        <input type="TextLine" name="linkText">
+        <inline mixin="link-url"/>
+        <!--<input type="TextLine" name="linkText">
           <label>Link text</label>
           <immutable>false</immutable>
           <indexed>false</indexed>
@@ -73,7 +74,7 @@
           <immutable>false</immutable>
           <indexed>false</indexed>
           <occurrences minimum="0" maximum="1"/>
-        </input>
+        </input>-->
         <input type="Checkbox" name="linkHighlight">
           <label>Link highlight</label>
           <immutable>false</immutable>

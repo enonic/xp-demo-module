@@ -8,7 +8,7 @@ function handleGet(req) {
     var config = component.config;
     var linkPageKey = config.linkPage;
     var linkUrl = config.linkUrl;
-    var defaultLinkUrl = 'https://enonoic.com/community';
+    var anchorContentKey = config['anchorContent'];
     var videos = config.videos;
 
     //If there is only one video then make it an array.
@@ -18,8 +18,9 @@ function handleGet(req) {
         heading: config.heading,
         // Check for an actual value in the first video to prevent problems when somebody saves the page without values in the form.
         videos: videos && videos[0] && videos[0].title != '' ? videos : [],
-        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, defaultLinkUrl),
-        linkText: config.linkText ? config.linkText : 'Visit our community site for more information'
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey),
+        linkText: config.linkText || null,
+        bgColor: component.config['themeColor'] || null
     };
 
 

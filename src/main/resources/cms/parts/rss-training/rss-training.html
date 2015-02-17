@@ -36,7 +36,7 @@
 
         </ol>
 
-        <a href="#" data-th-href="${linkUrl}" class="button highlight" data-th-text="${linkText}">Visit the Enonic Academy</a>
+        <a data-th-if="${linkText}" href="#" data-th-href="${linkUrl}" class="button highlight" data-th-text="${linkText}">Visit the Enonic Academy</a>
     </div>
     <!--<script type="text/javascript" data-th-src="${portal.assetUrl({'_path=js/jquery.jfeed.js'})}" src=""></script>
     <script type="text/javascript">

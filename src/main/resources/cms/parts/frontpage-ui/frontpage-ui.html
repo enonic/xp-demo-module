@@ -1,19 +1,7 @@
 <section class="tour user-interface part">
     <div class="container">
-        <h2>The fastest way from idea to Digital eXperience</h2>
-        <!--<h2>Enable people - anywhere</h2>-->
-
-        <p>Powerful, clean and responsive user interface.</p>
-
-
-        <div class="youtube video masked lightbox highlight" data-youtube-id="z4As-BCvzD8" data-title=""></div>
-
-        <!--<div class="masked-video-player">
-            <div class="youtube player" data-video-id="M7lc1UVf-VE">
-            </div>
-
-            <a href="#" class="video play button highlight">Play video</a>
-        </div>-->
+        <h2 data-th-text="${data.title}">The fastest way from idea to Digital eXperience</h2>
+        <p data-th-text="${data.preface}">Powerful, clean and responsive user interface.</p>
+        <div data-th-if="${data.youtubeId}" data-th-attr="data-youtube-id=${data.youtubeId}" class="youtube video masked lightbox highlight" data-youtube-id="z4As-BCvzD8" data-title=""></div>
     </div>
-
 </section>

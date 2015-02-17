@@ -6,44 +6,44 @@
             <!-- Keep the page from breaking when creating a new Office content -->
             <h3 data-th-if="${office.title}" data-th-text="${office.title}">Oslo</h3>
 
-            <img data-th-if="${office.image}" data-th-src="${portal.imageUrl({'_id=' + office.image, '_filter=scaleBlock(1536, 288)', '_format=jpeg'})}" src="img/tmp/10334757234_0f482b3c9a_k.jpg" alt="Image by flickr user vilartoni"/>
+            <img data-th-if="${office.image}" data-th-src="${portal.imageUrl({'_id=' + office.image, '_filter=scaleBlock(1536, 288)', '_format=jpeg'})}" src="img/tmp/10334757234_0f482b3c9a_k.jpg" alt=""/>
             <div class="tabbody">
 
 
                 <div class="address">
                     <div>
                         <h4>Visiting address</h4>
-                        <span data-th-if="${office.name}" data-th-text="${office.name}">Enonic AS</span>
-                        <span data-th-if="${office.visitingStreetAddress}" data-th-text="${office.visitingStreetAddress}" >Kirkegata 1-3</span>
-                        <span data-th-if="${office.visitingCity}" data-th-text="${office.visitingCity}" >Oslo</span>
-                        <span data-th-if="${office.country}" data-th-text="${office.country}" >Norway</span>
+                        <div data-th-if="${office.name}" data-th-text="${office.name}">Enonic AS</div>
+                        <div data-th-if="${office.visitingStreetAddress}" data-th-text="${office.visitingStreetAddress}" >Kirkegata 1-3</div>
+                        <div data-th-if="${office.visitingCity}" data-th-text="${office.visitingCity}" >Oslo</div>
+                        <div data-th-if="${office.country}" data-th-text="${office.country}" >Norway</div>
                         <!--<span><span itemprop="postalCode" data-th-if="${office.visitingPostalCode}" data-th-text="${office.visitingPostalCode[0]}" >0153</span><span itemprop="addressRegion">Oslo</span></span>-->
 
                     </div>
                     <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
                         <h4>Postal address</h4>
-                        <span data-th-if="${office.postalStreetAddress}" data-th-text="${office.postalStreetAddress}" itemprop="streetAddress">Postbox 224 Sentrum</span>
+                        <div data-th-if="${office.postalStreetAddress}" data-th-text="${office.postalStreetAddress}" itemprop="streetAddress">Postbox 224 Sentrum</div>
 
                         <div data-th-switch="${office.country}" data-th-remove="tag">
-                            <div data-th-case="'USA'" data-th-remove="tag">
+                            <div data-th-case="'USA'">
                                 <span data-th-if="${office.postalPostalAddress}" data-th-text="${office.postalPostalAddress}" itemprop="addressLocality">Oslo</span>
                                 <span data-th-if="${office.postalPostalCode}" data-th-text="${office.postalPostalCode}" itemprop="postalCode">0153</span>
                             </div>
-                            <div data-th-case="*" data-th-remove="tag">
+                            <div data-th-case="*">
                                 <span data-th-if="${office.postalPostalCode}" data-th-text="${office.postalPostalCode}" itemprop="postalCode">0153</span>
                                 <span data-th-if="${office.postalPostalAddress}" data-th-text="${office.postalPostalAddress}" itemprop="addressLocality" >Oslo</span>
                             </div>
                         </div>
 
-                        <span itemprop="addressCountry" data-th-if="${office.country}" data-th-text="${office.country}" >Norway</span>
+                        <div itemprop="addressCountry" data-th-if="${office.country}" data-th-text="${office.country}" >Norway</div>
                     </div>
                     <div>
 
                         <h4>Contact</h4>
-                        <span data-th-if="${office.companyName}" data-th-text="${office.companyName}" itemprop="name">Enonic AS</span>
-                        <span data-th-if="${office.phone}">Phone: <a data-th-href="'tel:' + ${office.phone}" href="tel:+47 22 00 85 50" itemprop="telephone" data-th-text="${office.phone}">+47 22 00 85 50</a></span><!--
+                        <div data-th-if="${office.companyName}" data-th-text="${office.companyName}" itemprop="name">Enonic AS</div>
+                        <div data-th-if="${office.phone}">Phone: <a data-th-href="'tel:' + ${office.phone}" href="tel:+47 22 00 85 50" itemprop="telephone" data-th-text="${office.phone}">+47 22 00 85 50</a></div><!--
                         <span data-th-if="${office.fax}">Fax: <span itemprop="faxNumber">+47 22 00 85 51</span></span>-->
-                        <span data-th-if="${office.email}">Email: <a href="mailto:info@enonic.com" itemprop="email" data-th-href="'mailto:' + ${office.email}">info@enonic.com</a></span><!--
+                        <div data-th-if="${office.email}">Email: <a href="mailto:info@enonic.com" itemprop="email" data-th-href="'mailto:' + ${office.email}">info@enonic.com</a></div><!--
                         <span>Organization number: 976 786 270 MVA</span>-->
                     </div>
                 </div>

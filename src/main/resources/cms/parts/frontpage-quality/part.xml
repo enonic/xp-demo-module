@@ -2,25 +2,18 @@
 <part-component>
   <display-name>Frontpage quality</display-name>
   <config>
+      <input type="TextLine" name="title">
+      <label>Title</label>
+      <occurrences minimum="1" maximum="1"/>
+  </input>
+    <input type="TextArea" name="preface">
+        <label>Preface</label>
+        <occurrences minimum="1" maximum="1"/>
+    </input>
     <field-set name="link">
       <label>Link</label>
       <items>
-        <input type="TextLine" name="linkText">
-          <label>Link text</label>
-          <occurrences minimum="1" maximum="1"/>
-        </input>
-        <input type="ContentSelector" name="linkPage">
-          <label>Link page</label>
-          <occurrences minimum="0" maximum="1"/>
-          <config>
-            <relationship-type>system:reference</relationship-type>
-            <allow-content-type>landing-page</allow-content-type>
-          </config>
-        </input>
-        <input type="TextLine" name="linkUrl">
-          <label>Link URL</label>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
+          <inline mixin="link-url"/>
       </items>
     </field-set>
   </config>

@@ -8,18 +8,16 @@ function handleGet(req) {
     var heading = config.heading ? config.heading : 'Works with the tools you already love';
     var text = config.text ? config.text : 'That is why we focus on building the best platform for digital experiences - and make it easy to integrate with your favorite tools.';
     var linkUrl = config.linkUrl;
-    var defaultLinkUrl = 'https://enonic.com/features';
     var linkPageKey = config.linkPage;
-    var linkText = config.linkText ? config.linkText : 'Explore our 3rd party integrations';
-
-    stk.log(config);
+    var linkText = config.linkText || null;
+    var anchorContentKey = config['anchorContent'];
 
     var params = {
         config: config,
         heading: heading,
         text: text,
-        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, defaultLinkUrl),
-        linkText: linkText,
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey),
+        linkText: linkText
     };
 
     var view = resolve('frontpage-tools.html');

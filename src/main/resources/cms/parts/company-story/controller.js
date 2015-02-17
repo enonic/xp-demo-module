@@ -52,6 +52,8 @@ function handleGet(req) {
     var params = {
         context: req,
         component: component,
+        title: component.config['title'] || 'part not configured',
+        preface: component.config['preface'] || null,
         events: result.contents,
         years: yearsArray,
         currentYear: new Date().getFullYear()

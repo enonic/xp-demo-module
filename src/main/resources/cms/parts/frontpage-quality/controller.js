@@ -6,15 +6,19 @@ function handleGet(req) {
     var component = execute('portal.getComponent');
     var config = component.config;
     var linkUrl = config['linkUrl'];
-    var defaultLinkUrl = 'https://enonic.com/case-studies';
     var linkPageKey = config['linkPage'];
-    var linkText = config['linkText'] ? config['linkText'] : 'Read our case studies';
+    var linkText = config['linkText'] || null;
+    var anchorContentKey = config['anchorContent'];
+
+    var data = {};
+    data.title = component.config['title'] || 'Part not configured';
+    data.preface = component.config['preface'] || 'Part not configured';
 
     var params = {
         config: config,
-        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, defaultLinkUrl),
+        linkUrl: utilities.getLinkUrl(linkPageKey, linkUrl, anchorContentKey) || '#',
         linkText: linkText,
-
+        data: data
     };
 
     var view = resolve('frontpage-quality.html');

@@ -5,14 +5,8 @@
         <p data-th-text="${text}">That is why we focus on building the best platform for digital experiences - and make it easy to integrate
             with your favorite tools.</p>
 
-        <figure>
-            <img src="img/enonic-puzzle.svg"  data-th-src="${portal.assetUrl({'_path=img/enonic-puzzle.svg'})}" alt=""/>
-        </figure>
+        <img src="img/enonic-puzzle.svg"  data-th-src="${portal.assetUrl({'_path=img/enonic-puzzle.svg'})}" alt=""/>
 
-        <p>
-            <a href="#" class="button" data-th-href="${linkUrl}" data-th-text="${linkText}">Explore our 3rd party integrations</a>
-        </p>
+        <a data-th-if="${linkText}" href="#" class="button" data-th-href="${linkUrl}" data-th-text="${linkText}">Explore our 3rd party integrations</a>
     </div>
-
-
 </section>

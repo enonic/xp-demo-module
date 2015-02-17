@@ -49,14 +49,7 @@
             <h3>Download</h3>
             <p data-th-utext="${data.description}">No registration, no expiration - requires java.<br/>
                 Download takes 2-5 minutes.</p>
-            <a href="" class="button highlight download" id="os-download">Download for OSX</a>
-            <p style="margin-bottom:0;">Or <a href="" id="open-list">download for other platforms</a></p>
-
-            <ul id="download-platforms" style="display:none;width:100px;margin:1em auto 0;">
-                <li><a href="#">Windows</a></li>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">Linux</a></li>
-            </ul>
+            <a data-th-href="${data.downloadUrl}" href="" class="button highlight download" id="os-download">Download now</a>
 
             <h4>Learn more</h4>
             <ul>
@@ -74,33 +67,3 @@
     </section>
 
 </div>
-<script type="text/javascript">
-
-    $('#open-list').on('click', function(e) {
-        e.preventDefault();
-        $('#download-platforms').slideToggle('slow');
-    });
-
-    var OSName="Windows";
-    var OSUrl="http://enonic.com/downloads/windows.zip";
-
-    if (navigator.appVersion.indexOf("Win")!=-1) {
-     OSName="Windows";
-     OSUrl="http://enonic.com/downloads/windows.zip";
-    }
-    if (navigator.appVersion.indexOf("Mac")!=-1) {
-     OSName="MacOS";
-     OSUrl="http://enonic.com/downloads/mac.zip";
-    }
-    if (navigator.appVersion.indexOf("X11")!=-1) {
-     OSName="UNIX";
-     OSUrl="http://enonic.com/downloads/unix.zip";
-    }
-    if (navigator.appVersion.indexOf("Linux")!=-1) {
-     OSName="Linux";
-     OSUrl="http://enonic.com/downloads/linux.zip";
-    }
-
-    $('#os-download').text('Download for ' + OSName).attr('href', OSUrl);
-    
-</script>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-  <name>demo</name>
-  <display-name>Enonic Demo Module</display-name>
-  <info>Enonic Demo Module</info>
+  <display-name>Enonic Web</display-name>
+  <info>Enonic Web Module</info>
   <url>http://enonic.com/</url>
   <vendor>
     <name>Enonic AS</name>

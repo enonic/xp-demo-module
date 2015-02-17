@@ -2,7 +2,6 @@ function isInteger(x) {
     return Math.round(x) === x;
 }
 
-
 /**
  * Checks if the content is a menu item.
  * @param {Content} content object obtained with 'portal.getContent', 'portal.getSite' or any 'content.*' commands
@@ -13,7 +12,8 @@ function isMenuItem(content) {
     if (!extraData) {
         return false;
     }
-    var extraDataModule = extraData['com-enonic-xp-modules-demo'];
+    var moduleNamePropertyName = module.name.replace(/\./g,'-');
+    var extraDataModule = extraData[moduleNamePropertyName];
     if (!extraDataModule || !extraDataModule['menu-item']) {
         return false;
     }
@@ -61,7 +61,8 @@ function menuItemToJson(content, levels) {
      subMenus = getSubMenus(content, levels);
     }
 
-    var menuItem = content.x['com-enonic-xp-modules-demo']['menu-item'];
+    var moduleNamePropertyName = module.name.replace(/\./g,'-');
+    var menuItem = content.x[moduleNamePropertyName]['menu-item'];
     return {
         displayName: content.displayName,
         menuName: menuItem.menuName && menuItem.menuName.length ? menuItem.menuName : null,

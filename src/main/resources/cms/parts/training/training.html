@@ -1,4 +1,4 @@
-<section class="training part">
+<section class="training part" data-th-classappend="${bgColor}">
     <div class="container">
         <h2>Training and certification</h2>
         <p data-th-utext="${text}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at imperdiet magna, id interdum magna. Vestibulum luctus venenatis venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi rhoncus ipsum at dolor posuere hendrerit. Ut condimentum non dui sed mollis. Aliquam sit amet pulvinar enim, in aliquet tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus in turpis egestas, luctus urna sodales, fringilla eros. Quisque sed est ac magna scelerisque imperdiet. Sed sit amet ante ex. Sed tempor lacus odio, in vulputate tellus suscipit sollicitudin. In sit amet viverra turpis, vitae venenatis ligula.</p>
@@ -27,6 +27,6 @@
             </li>
         </ol>
 
-        <a href="#" data-th-href="${url}" class="button highlight">Visit the Enonic Academy</a>
+        <a data-th-if="${linkText}" data-th-href="${linkUrl}" data-th-text="${linkText}" href="#"  class="button highlight">Visit the Enonic Academy</a>
     </div>
 </section>

@@ -74,7 +74,7 @@
 
     <main role="main" id="main" data-portal-component-type="region">
         <div data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
-            <div data-wem-component="${component.path}" data-th-remove="tag"></div>
+            <div data-portal-component="${component.path}" data-th-remove="tag"></div>
         </div>
     </main>
 

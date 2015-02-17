@@ -2,7 +2,7 @@
     <h1 data-th-text="${content.displayName}">Partners</h1>
 
 
-    <section data-th-each="feature : ${features}">
+    <section data-th-each="feature : ${features}" data-th-id="${feature['_name']}">
         <div class="container">
             <h2 data-th-text="${feature.displayName}">Private app store</h2>
 
@@ -18,7 +18,7 @@
 
                 <div data-th-each="image : ${feature.data.images}" data-th-remove="tag">
                     <figure data-th-if="${image.image}">
-                        <img src="img/tmp/5ern1.png" alt="" data-th-src="${portal.imageUrl({'_id=' + image.image, '_filter=scaleBlock(800,450)', '_format=jpeg'})}"/>
+                        <img src="img/tmp/5ern1.png" alt="" data-th-src="${portal.imageUrl({'_id=' + image.image, '_filter=scaleBlock(800,450)', '_format=jpg', '_quality=90'})}"/>
                         <figcaption data-th-if="${image['image-caption']}" data-th-text="${image['image-caption']}">This is just a test</figcaption>
                     </figure>
                 </div>

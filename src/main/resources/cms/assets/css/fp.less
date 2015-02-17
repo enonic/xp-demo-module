@@ -458,6 +458,11 @@
     max-width: 600px;
   }
 
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.intro {
     min-height: 500px;
     padding: @distance-master 0;
@@ -662,6 +667,8 @@
 
         @media @device-mobile {
           .font-size(12);
+          top: 100%;
+          margin-top: 20px;
         }
       }
     }
@@ -673,6 +680,10 @@
 
       h3 {
         padding-left: 15%;
+
+        @media @device-mobile {
+          padding-left: 0;
+        }
       }
 
       &.reverse {
@@ -683,6 +694,10 @@
         h3 {
           padding-left: 0;
           margin-left: -10%;
+
+          @media @device-mobile {
+            margin-left: 0;
+          }
         }
       }
     }

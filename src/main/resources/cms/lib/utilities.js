@@ -1,3 +1,5 @@
+var stk = require('/cms/lib/stk/stk.js');
+
 // Module specific utilities, not suitable for STK
 
 /**
@@ -5,23 +7,32 @@
  * with page picker for a link.
  * @param {Content} content key of the selected landing page, if one was selected. config['linkPage']
  * @param {String} Hardcoded URL for external link. Overrides the page.
- * @param {String} Default URL will be used if no page or link.
+ * @param {Content} Content key of link anchor content.
  * @return {String} Returns the URL
  */
-exports.getLinkUrl = function(page, link, defaultLinkUrl) {
-    var url = defaultLinkUrl;
+exports.getLinkUrl = function(contentKey, url, anchorContentKey) {
+    var returnUrl = null;
 
-    if (link) {
-        url = link;
-    } else if (page) {
+    if (url) {
+        returnUrl = url;
+    }
+    else if (contentKey) {
         var result = execute('content.get', {
-           key: page
+           key: contentKey
         });
         if (result) {
-            url = execute('portal.pageUrl', {
+            returnUrl = execute('portal.pageUrl', {
                path: result._path
             });
+            if (anchorContentKey) {
+                var anchor = exports.getContentAnchor(anchorContentKey);
+                returnUrl += anchor ? '#' + anchor : null;
+            }
         }
     }
-    return url;
+    return returnUrl;
+};
+
+exports.getContentAnchor = function(contentKey) {
+    return stk.content.getProperty(contentKey, '_name');
 };

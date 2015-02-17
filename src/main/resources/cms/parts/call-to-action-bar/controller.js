@@ -12,7 +12,7 @@ function handleGet(req) {
 
     // Use the utility function to create the page URL or the external URL or set a default URL if neither is set.
     for(var i = 0; i < links.length; i++) {
-        links[i].link = util.getLinkUrl(links[i].linkPage, links[i].linkUrl, 'https://enonic.com');
+        links[i].link = util.getLinkUrl(links[i].linkPage, links[i].linkUrl);
     }
 
     var params = {
