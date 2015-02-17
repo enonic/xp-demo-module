@@ -1,4 +1,4 @@
-package com.enonic.xp.demo.intializer;
+package com.enonic.xp.demo.initializer;
 
 import java.util.concurrent.Callable;
 
@@ -47,7 +47,6 @@ public class DemoInitializer
 
     private ExportService exportService;
 
-
     private final Logger LOG = LoggerFactory.getLogger( DemoInitializer.class );
 
     @Activate
@@ -55,7 +54,7 @@ public class DemoInitializer
         throws Exception
     {
         runAs( RoleKeys.CONTENT_MANAGER_ADMIN, () -> {
-          //  doInitialize();
+            doInitialize();
             return null;
         } );
     }
@@ -63,7 +62,7 @@ public class DemoInitializer
     private void doInitialize()
         throws Exception
     {
-        final ContentPath demoSitePath = ContentPath.from( "/enonic-demo-site" );
+        final ContentPath demoSitePath = ContentPath.from( "/demo-site" );
         if ( hasContent( demoSitePath ) )
         {
             return;

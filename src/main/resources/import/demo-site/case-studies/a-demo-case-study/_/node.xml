@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node xmlns="urn:enonic:xp:export:1.0">
+    <id>89d56161-a2d2-4405-a2db-d60512a1ee62</id>
+    <childOrder>modifiedtime DESC</childOrder>
+    <nodeType>content</nodeType>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">A demo case study</string>
+        <string name="type">com.enonic.xp.modules.demo:case-study</string>
+        <string name="owner">user:system:su</string>
+        <string name="language">en</string>
+        <dateTime name="modifiedTime">2015-02-17T11:01:37.461Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2015-02-17T11:01:37.461Z</dateTime>
+        <property-set name="data">
+            <string name="title">A demo case study</string>
+            <string name="preface">Lorem ipsum dolor sit amet, eos reque inimicus ne, libris feugiat saperet cu pro. Ea usu erant mundi signiferumque, facete officiis insolens no his. Ex pri labore meliore, nominati disputando ex cum, nec vidit corpora torquatos id. An assum harum virtute pro, elitr nobis mel an.</string>
+            <string name="bodyText">&amp;lt;p&amp;gt;Id sed impetus omittam expetenda, ut duo modo persecuti. Per at altera dignissim concludaturque, mea in ignota facilisis. Est et minim appareat, ferri fierent ad usu. Mel aeque doctus delicata no. Ex nam aliquip eleifend, audiam ceteros vis ut, ignota meliore vis ea.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Laudem lobortis salutatus usu ad, mutat option tritani mei eu. Sea idque mentitum prodesset et. Usu epicuri similique ei, ea molestie electram cum. Usu consul verterem eu, ne ponderum lobortis electram duo. Te quo virtute posidonium, ut mel phaedrum molestiae.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Congue doming in vis. Est harum gubergren deterruisset eu, phaedrum delicata eu mel. Vis elit adversarium te, vis te tollit fastidii reprimique, te utinam eligendi iudicabit vis. Eu duo mazim postea definitionem, vis dico fugit postulant ne, est ut nostro persius iuvaret. Nec prompta patrioque dissentiet ut, vocent placerat te sit.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Vel omnis quodsi aliquid in, omittam definitiones no quo. Ad mei senserit partiendo expetendis, in vim ullum nonumy expetenda, mei vivendum maiestatis te. Has tollit voluptatum ex, qui ne tritani appetere. In vim nostrum omnesque, mea wisi essent expetendis ea, duis ignota antiopam nec ut. Ne illum paulo mea.&amp;lt;/p&amp;gt;</string>
+            <string name="linkText">Read case study</string>
+            <string name="linkUrl">http://www.enonic.com</string>
+            <string name="quote">Eu duo mazim postea definitionem, vis dico fugit postulant ne, est ut nostro persius iuvaret. Nec prompta patrioque dissentiet ut, vocent placerat te sit.</string>
+            <string name="quoteName">Quote by a person</string>
+            <reference name="quoteImage">357efe70-be12-4346-8665-9ec7fe5a3e03</reference>
+            <reference name="screenDesktop">452adf0e-9587-49f5-9044-df441816027e</reference>
+            <reference name="screenMobile">8b62e758-50a7-49eb-a8ca-f5572617551c</reference>
+        </property-set>
+        <property-set name="x">
+            <property-set name="com-enonic-xp-modules-demo">
+                <property-set name="menu-item">
+                    <boolean name="menuItem">false</boolean>
+                    <string name="menuName"></string>
+                </property-set>
+            </property-set>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>content_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>
