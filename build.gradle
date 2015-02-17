@@ -19,7 +19,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.eriwen.gradle.js'
 apply plugin: 'base'
 
-version = '1.0.0-SNAPSHOT'
+version = '1.0.0'
 group = 'com.enonic.xp.modules'
 
 module {
