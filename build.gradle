@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.enonic.xp.gradle:gradle-plugin:1.0.0'
+        classpath 'com.enonic.xp.gradle:gradle-plugin:1.0.3'
         classpath 'com.eriwen:gradle-js-plugin:1.12.1'
     }
 }
@@ -28,7 +28,7 @@ module {
 }
 
 dependencies {
-    compile 'com.enonic.xp:core-api:5.0.0-SNAPSHOT'
+    compile 'com.enonic.xp:core-api:5.0.0'
 }
 
 repositories {
