@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node xmlns="urn:enonic:xp:export:1.0">
+    <id>ac396741-22f4-4248-81b0-cefd3de9f450</id>
+    <childOrder>modifiedtime DESC</childOrder>
+    <nodeType>content</nodeType>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">Case studies</string>
+        <string name="type">com.enonic.xp.modules.demo:landing-page</string>
+        <string name="owner">user:system:su</string>
+        <string name="language">en</string>
+        <dateTime name="modifiedTime">2015-02-17T10:43:22.705Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2015-02-17T10:43:22.705Z</dateTime>
+        <property-set name="data"/>
+        <property-set name="x">
+            <property-set name="com-enonic-xp-modules-demo">
+                <property-set name="menu-item">
+                    <boolean name="menuItem">true</boolean>
+                    <string name="menuName"></string>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="page">
+            <string isNull="true" name="controller"/>
+            <reference name="template">9d6a51f0-ba58-400a-8231-7f8a683ef486</reference>
+            <property-set name="region">
+                <string name="name">main</string>
+                <property-set name="component">
+                    <string name="type">PartComponent</string>
+                    <property-set name="PartComponent">
+                        <string name="name">Case study list</string>
+                        <string name="template">com.enonic.xp.modules.demo:case-study-list</string>
+                        <property-set name="config"/>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">PartComponent</string>
+                    <property-set name="PartComponent">
+                        <string name="name">Powered by sites</string>
+                        <string name="template">com.enonic.xp.modules.demo:powered-by-sites</string>
+                        <property-set name="config">
+                            <reference name="contentLocation">9315fc54-9d25-4a4b-ae8d-6c4200938c41</reference>
+                        </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>content_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>

@@ -6,7 +6,7 @@
             <!-- Keep the page from breaking when creating a new Office content -->
             <h3 data-th-if="${office.title}" data-th-text="${office.title}">Oslo</h3>
 
-            <img data-th-if="${office.image}" data-th-src="${portal.imageUrl({'_id=' + office.image, '_filter=scaleBlock(1536, 288)', '_format=jpeg'})}" src="img/tmp/10334757234_0f482b3c9a_k.jpg" alt=""/>
+            <img data-th-if="${office.image}" data-th-src="${portal.imageUrl({'_id=' + office.image, '_filter=scaleBlock(1536, 288)', '_format=jpeg', '_quality=90'})}" src="img/tmp/10334757234_0f482b3c9a_k.jpg" alt=""/>
             <div class="tabbody">
 
 

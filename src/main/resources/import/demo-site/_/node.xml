@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node xmlns="urn:enonic:xp:export:1.0">
+    <id>2dfbdc41-af98-4b3c-a2a9-9dc4814d003a</id>
+    <childOrder>_manualordervalue DESC</childOrder>
+    <nodeType>content</nodeType>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">Demo site</string>
+        <string name="type">portal:site</string>
+        <string name="owner">user:system:su</string>
+        <string name="language">en</string>
+        <dateTime name="modifiedTime">2015-02-17T10:41:15.714Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2015-02-17T10:41:15.714Z</dateTime>
+        <property-set name="data">
+            <string name="description"></string>
+            <property-set name="moduleConfig">
+                <string name="moduleKey">com.enonic.xp.modules.demo</string>
+                <property-set name="config">
+                    <string name="googleUATrackingId"></string>
+                    <reference name="office">bb002cc6-61f9-4c20-97b7-89d20844411e</reference>
+                    <reference name="contactPage">9ebc129c-8d9d-483c-a204-22a98415b715</reference>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="x">
+            <property-set name="com-enonic-xp-modules-demo">
+                <property-set name="menu-item">
+                    <boolean name="menuItem">false</boolean>
+                    <string name="menuName"></string>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="page">
+            <string isNull="true" name="controller"/>
+            <reference name="template">9d6a51f0-ba58-400a-8231-7f8a683ef486</reference>
+            <property-set name="region">
+                <string name="name">main</string>
+                <property-set name="component">
+                    <string name="type">TextComponent</string>
+                    <property-set name="TextComponent">
+                        <string name="name">Text</string>
+                        <string name="text">&amp;lt;h1&amp;gt;Welcome to the Enonic XP demo site&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;This site is based on the module for &amp;lt;a href=&amp;quot;http://www.enonic.com&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;enonic.com&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;</string>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">PartComponent</string>
+                    <property-set name="PartComponent">
+                        <string name="name">Dream story</string>
+                        <string name="template">com.enonic.xp.modules.demo:dream-story</string>
+                        <property-set name="config">
+                            <string name="dream">a good demo site?</string>
+                            <string name="dream">a new cms?</string>
+                            <string name="dream">more agility?</string>
+                        </property-set>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">PartComponent</string>
+                    <property-set name="PartComponent">
+                        <string name="name">Frontpage UI</string>
+                        <string name="template">com.enonic.xp.modules.demo:frontpage-ui</string>
+                        <property-set name="config">
+                            <string name="title">Fastest way from idea to Digital Experience</string>
+                            <string name="preface">Watch our video</string>
+                            <string name="youtubeId">cFfxuWUgcvI</string>
+                        </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+            <property-set name="config">
+                <boolean name="offsetHeadingRank">false</boolean>
+                <string name="headerType">default</string>
+                <string isNull="true" name="headerColor"/>
+            </property-set>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>content_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>

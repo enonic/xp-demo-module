@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node xmlns="urn:enonic:xp:export:1.0">
+    <id>34c14fb9-216e-451e-a027-e1deebb79938</id>
+    <childOrder>modifiedtime DESC</childOrder>
+    <nodeType>content</nodeType>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">Enonic in Oslo.jpg</string>
+        <string name="type">media:image</string>
+        <dateTime name="createdTime">2015-02-17T11:24:14.938Z</dateTime>
+        <string name="creator">user:system:su</string>
+        <string name="modifier">user:system:su</string>
+        <dateTime name="modifiedTime">2015-02-17T11:24:14.938Z</dateTime>
+        <string name="owner">user:system:su</string>
+        <string name="language">en</string>
+        <property-set name="data">
+            <string name="media">Enonic in Oslo.jpg</string>
+            <string name="caption"></string>
+            <string name="artist"></string>
+            <string name="copyright"></string>
+            <string name="tags"></string>
+        </property-set>
+        <property-set name="x">
+            <property-set name="media">
+                <property-set name="image-info">
+                    <string name="imageHeight">467</string>
+                    <string name="imageWidth">2048</string>
+                    <string name="contentType">image/jpeg</string>
+                    <string name="bytesize">191371</string>
+                    <long name="pixelSize">956416</long>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="attachment">
+            <string name="name">Enonic in Oslo.jpg</string>
+            <string name="label">source</string>
+            <binaryReference name="binary">Enonic in Oslo.jpg</binaryReference>
+            <string name="mimeType">image/jpeg</string>
+            <long name="size">191371</long>
+        </property-set>
+        <property-set name="attachment">
+            <string name="name">Enonic in Oslo_small.jpg</string>
+            <string name="label">small</string>
+            <binaryReference name="binary">Enonic in Oslo_small.jpg</binaryReference>
+            <string name="mimeType">image/jpeg</string>
+            <long name="size">3993</long>
+        </property-set>
+        <property-set name="attachment">
+            <string name="name">Enonic in Oslo_medium.jpg</string>
+            <string name="label">medium</string>
+            <binaryReference name="binary">Enonic in Oslo_medium.jpg</binaryReference>
+            <string name="mimeType">image/jpeg</string>
+            <long name="size">11521</long>
+        </property-set>
+        <property-set name="attachment">
+            <string name="name">Enonic in Oslo_large.jpg</string>
+            <string name="label">large</string>
+            <binaryReference name="binary">Enonic in Oslo_large.jpg</binaryReference>
+            <string name="mimeType">image/jpeg</string>
+            <long name="size">37555</long>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>content_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>
