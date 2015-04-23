@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <node xmlns="urn:enonic:xp:export:1.0">
     <id>2dfbdc41-af98-4b3c-a2a9-9dc4814d003a</id>
     <childOrder>_manualordervalue DESC</childOrder>
@@ -9,16 +8,16 @@
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
         <string name="language">en</string>
-        <dateTime name="modifiedTime">2015-02-17T10:41:15.714Z</dateTime>
-        <string name="modifier">user:system:su</string>
+        <dateTime name="modifiedTime">2015-04-23T12:23:57.207Z</dateTime>
+        <string name="modifier">user:system:anonymous</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2015-02-17T10:41:15.714Z</dateTime>
         <property-set name="data">
-            <string name="description"></string>
+            <string name="description"/>
             <property-set name="moduleConfig">
                 <string name="moduleKey">com.enonic.xp.modules.demo</string>
                 <property-set name="config">
-                    <string name="googleUATrackingId"></string>
+                    <string name="googleUATrackingId"/>
                     <reference name="office">bb002cc6-61f9-4c20-97b7-89d20844411e</reference>
                     <reference name="contactPage">9ebc129c-8d9d-483c-a204-22a98415b715</reference>
                 </property-set>
@@ -28,7 +27,7 @@
             <property-set name="com-enonic-xp-modules-demo">
                 <property-set name="menu-item">
                     <boolean name="menuItem">false</boolean>
-                    <string name="menuName"></string>
+                    <string name="menuName"/>
                 </property-set>
             </property-set>
         </property-set>
@@ -41,7 +40,7 @@
                     <string name="type">TextComponent</string>
                     <property-set name="TextComponent">
                         <string name="name">Text</string>
-                        <string name="text">&amp;lt;h1&amp;gt;Welcome to the Enonic XP demo site&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;This site is based on the module for &amp;lt;a href=&amp;quot;http://www.enonic.com&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;enonic.com&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;</string>
+                        <string name="text">&lt;h1&gt;Welcome to the Enonic XP demo site&lt;/h1&gt;&lt;p&gt;This site is based on the module for &lt;a href="http://www.enonic.com" target="_blank"&gt;enonic.com&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
                     </property-set>
                 </property-set>
                 <property-set name="component">

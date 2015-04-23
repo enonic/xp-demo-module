@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <node xmlns="urn:enonic:xp:export:1.0">
     <id>bb002cc6-61f9-4c20-97b7-89d20844411e</id>
     <childOrder>modifiedtime DESC</childOrder>
@@ -29,7 +28,7 @@
             <property-set name="com-enonic-xp-modules-demo">
                 <property-set name="menu-item">
                     <boolean name="menuItem">false</boolean>
-                    <string name="menuName"></string>
+                    <string name="menuName"/>
                 </property-set>
             </property-set>
         </property-set>

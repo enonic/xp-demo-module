@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <node xmlns="urn:enonic:xp:export:1.0">
     <id>8b62e758-50a7-49eb-a8ca-f5572617551c</id>
     <childOrder>modifiedtime DESC</childOrder>
@@ -15,10 +14,10 @@
         <string name="language">en</string>
         <property-set name="data">
             <string name="media">Enonic.com iphone.png</string>
-            <string name="caption"></string>
-            <string name="artist"></string>
-            <string name="copyright"></string>
-            <string name="tags"></string>
+            <string name="caption"/>
+            <string name="artist"/>
+            <string name="copyright"/>
+            <string name="tags"/>
         </property-set>
         <property-set name="x">
             <property-set name="media">
