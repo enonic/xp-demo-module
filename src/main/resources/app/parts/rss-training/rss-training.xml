@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>RSS Training</display-name>
+  <config>
+    <field-set name="link">
+      <label>Link</label>
+      <items>
+        <input type="TextArea" name="text">
+          <label>Text</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <inline mixin="link-url"/>
+      </items>
+    </field-set>
+  </config>
+</part>

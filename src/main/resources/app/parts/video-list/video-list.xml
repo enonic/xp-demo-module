@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Video list</display-name>
+  <config>
+    <field-set name="heading">
+      <label>Part heading</label>
+      <items>
+        <input type="TextLine" name="heading">
+          <label>Heading</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+      <field-set name="background-color">
+          <label>Background color</label>
+          <items>
+              <inline mixin="theme-color-picker"/>
+          </items>
+      </field-set>
+    <field-set name="link">
+      <label>Link</label>
+      <items>
+        <inline mixin="link-url"/>
+      </items>
+    </field-set>
+    <field-set name="videos">
+      <label>Videos</label>
+      <items>
+        <item-set name="videos">
+          <label>Video</label>
+          <occurrences minimum="0" maximum="0"/>
+          <items>
+            <input type="TextLine" name="title">
+              <label>Title</label>
+              <occurrences minimum="0" maximum="1"/>
+            </input>
+            <input type="TextLine" name="videoId">
+              <label>Video ID</label>
+              <occurrences minimum="0" maximum="1"/>
+            </input>
+          </items>
+        </item-set>
+      </items>
+    </field-set>
+  </config>
+</part>

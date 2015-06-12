@@ -1,0 +1,39 @@
+<div class="case-studies part">
+
+
+    <section class="sites-powered">
+        <div class="container">
+            <h2>Sites powered by Enonic</h2>
+
+            <ul class="sites">
+                <div data-th-each="site : ${sites}" data-th-remove="tag">
+                    <li data-th-if="${site.data.title}">
+                        <article>
+                            <a href="case-study.html" data-th-href="${site.data.linkUrl}">
+                                <div class="devices">
+                                    <div class="screenshot laptop" data-th-if="${site.data.screenDesktop}">
+                                        <div class="wrapper">
+                                            <img src="img/tmp/get-monitor.png" data-th-src="${portal.imageUrl({'_id=' + site.data.screenDesktop, '_scale=block(1024, 578, 0.5, 0)', '_format=jpeg'})}" alt="Desktop screenshot"/>
+                                        </div>
+                                    </div>
+                                    <div class="screenshot phone" data-th-if="${site.data.screenMobile}">
+                                        <div class="wrapper">
+                                            <img src="img/tmp/get-phone.png" data-th-src="${portal.imageUrl({'_id=' + site.data.screenMobile, '_scale=block(214,376,0.5,0)', '_format=jpeg'})}" alt="Mobile screenshot"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 data-th-text="${site.displayName}">Get.no</h3>
+                            </a>
+                            <ul class="tags" data-th-if="${site.data.tag}">
+                                <li data-th-each="tag : ${site.data.tag}" data-th-text="${tag}"/>
+                            </ul>
+
+                        </article>
+
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </section>
+</div>
+

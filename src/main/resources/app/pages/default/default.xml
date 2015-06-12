@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<page>
+    <display-name>Default</display-name>
+    <config>
+        <input name="offsetHeadingRank" type="Checkbox">
+            <label>Offset heading rank</label>
+            <help-text>If set, H2 gets H1 styling, H3 gets H2 styling, and so on</help-text>
+            <immutable>false</immutable>
+            <indexed>false</indexed>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input name="headerType" type="SingleSelector">
+            <label>Header type</label>
+            <help-text>Layered will layer the header on top of (in front of) the first part</help-text>
+            <immutable>false</immutable>
+            <indexed>false</indexed>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <options>
+                    <option>
+                        <label>Default</label>
+                        <value>default</value>
+                    </option>
+                    <option>
+                        <label>Layered</label>
+                        <value>layered</value>
+                    </option>
+                </options>
+                <selector-type>DROPDOWN</selector-type>
+            </config>
+        </input>
+        <input name="headerColor" type="SingleSelector">
+            <label>Header color</label>
+            <help-text>Sets the color of header logo and menu button</help-text>
+            <immutable>false</immutable>
+            <indexed>false</indexed>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <options>
+                    <option>
+                        <label>Black</label>
+                        <value>black</value>
+                    </option>
+                    <option>
+                        <label>White</label>
+                        <value>white</value>
+                    </option>
+                </options>
+                <selector-type>DROPDOWN</selector-type>
+            </config>
+        </input>
+    </config>
+    <regions>
+        <region name="main"/>
+    </regions>
+</page>

@@ -1,0 +1,38 @@
+<div class="case-studies part">
+    <section>
+        <h1>Case studies</h1>
+
+        <div class="stage" data-th-classappend="${caseStudies} and ${#lists.size(caseStudies)} gt 1 ? 'owl-carousel carousel'">
+            <div data-th-each="caseStudy : ${caseStudies}" data-th-remove="tag">
+
+                <article class="container" data-th-if="${caseStudy.data.title}">
+                    <a href="case-study.html" data-th-href="${portal.pageUrl({'_path=' + caseStudy._path})}">
+                    <div class="devices">
+                        <div class="screenshot monitor" data-th-if="${caseStudy.data.screenDesktop}">
+                            <div class="wrapper">
+                                <img src="img/tmp/gjensidige-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.data.screenDesktop, '_scale=block(1024, 578, 0.5, 0)', '_format=jpeg'})}" alt="Desktop screenshot"/>
+                            </div>
+                        </div>
+                        <div class="screenshot tablet" data-th-if="${caseStudy.data.screenTablet}">
+                            <div class="wrapper">
+                                <img src="img/tmp/gjensidige-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.data.screenTablet, '_scale=block(614,817,0.5,0)', '_format=jpeg'})}" alt="Tablet screenshot"/>
+                            </div>
+                        </div>
+                        <div class="screenshot phone" data-th-if="${caseStudy.data.screenMobile}">
+                            <div class="wrapper">
+                                <img src="img/tmp/gjensidige-phone.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.data.screenMobile, '_scale=block(214,376,0.5,0)', '_format=jpeg'})}" alt="Mobile screenshot"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 data-th-text="${caseStudy.data.title}">A different insurance company</h2>
+                        </a>
+                    <p data-th-if="${caseStudy.data.preface}" data-th-text="${caseStudy.data.preface}">Gjensidige is a total provider of financial services, offering non-life insurance, banking, loans and saving.</p>
+                </article>
+            </div>
+
+
+        </div>
+
+    </section>
+</div>
