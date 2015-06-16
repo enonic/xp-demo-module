@@ -7,17 +7,17 @@
             <div class="screenshot monitor" data-th-if="${caseStudy.screenDesktop}">
                 <div class="wrapper">
                     <!--<img src="img/tmp/gjensidige-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenDesktop, '_scale=block(724,407)'})}" alt=""/>-->
-                    <img src="img/tmp/gjensidige-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenDesktop, '_scale=block(1024, 578, 0.5, 0)', '_format=jpeg'})}" alt=""/>
+                    <img src="img/tmp/gjensidige-monitor.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenDesktop, '_scale=block(1024, 578, 0.5, 0)', '_format=png'})}" alt=""/>
                 </div>
             </div>
             <div class="screenshot tablet" data-th-if="${caseStudy.screenTablet}">
                 <div class="wrapper">
-                    <img src="img/tmp/gjensidige-phone.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenTablet, '_scale=block(614,817,0.5,0)', '_format=jpeg'})}" alt=""/>
+                    <img src="img/tmp/gjensidige-phone.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenTablet, '_scale=block(614,817,0.5,0)', '_format=png'})}" alt=""/>
                 </div>
             </div>
             <div class="screenshot phone" data-th-if="${caseStudy.screenMobile}">
                 <div class="wrapper">
-                    <img src="img/tmp/gjensidige-phone.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenMobile, '_scale=block(63,112,0.5,0)', '_format=jpeg'})}" alt=""/>
+                    <img src="img/tmp/gjensidige-phone.png" data-th-src="${portal.imageUrl({'_id=' + caseStudy.screenMobile, '_scale=block(63,112,0.5,0)', '_format=png'})}" alt=""/>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
 
         <figure class="quote" data-th-if="${caseStudy.quote}">
-            <img src="img/tmp/MichaelScott.png" alt="" data-th-src="${portal.imageUrl({'_id=' + caseStudy.quoteImage, '_scale=block(167,167)', '_format=jpeg'})}" data-th-if="${caseStudy.quoteImage}"/>
+            <img src="img/tmp/MichaelScott.png" alt="" data-th-src="${portal.imageUrl({'_id=' + caseStudy.quoteImage, '_scale=block(167,167)', '_format=png'})}" data-th-if="${caseStudy.quoteImage}"/>
             <blockquote data-th-text="${caseStudy.quote}">“Curabitur faucibus quam metus, in blandit tellus ultricies in. Integer quis purus pretium, lacinia velit auctor, lobortis neque. Fusce a mauris sit amet nisi laoreet condimentum.</blockquote>
             <figcaption data-th-text="${caseStudy.quoteName}" data-th-if="${caseStudy.quoteName}">Lars Fosse — Marketing Director, Gjensidige Bank &amp; Finans</figcaption>
         </figure>
